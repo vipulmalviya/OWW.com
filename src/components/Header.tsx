@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import '../style.css'
+import { Link,NavLink } from 'react-router-dom';
 
 
 
@@ -55,10 +56,10 @@ const Header = () => {
         <div className="flex sidebarcol">
           <div className="sidebar">
             <ul className="text-container">
-              <li><a href="#about" className="effect hover-text about a" id="page1"></a></li>
-              <li><a href="#serv" className="effect hover-text serviceBtn2 a"></a></li>
-              <li><a href="case.html" className="effect hover-text case a"></a></li>
-              <li><a href="contact.html" className="effect hover-text contact a" id="page2"></a></li>
+              <li><Link to="/About" className="effect hover-text about a" id="page1"></Link></li>
+              <li><Link to="#serv" className="effect hover-text serviceBtn2 a"></Link></li>
+              <li><Link to="/Case" className="effect hover-text case a"></Link></li>
+              <li><Link to="/Contact" className="effect hover-text contact a" id="page2"></Link></li>
             </ul>
             <div className="btn navBtn">
               <span className="btnVisible">get a quote <i className="bx bx-chevron-right"></i></span>
@@ -72,16 +73,16 @@ const Header = () => {
         <div className="container">
           <nav>
             <div className="logo">
-              <a href="index.html">
+              <Link to="/">
                 <img src="src/assets/Profile png logo 1.svg" alt="logo of the old world web" />
-              </a>
+              </Link>
             </div>
             <div className="menu">
               <ul className="text-container">
-                <li><a href="#about" className="effect hover-text about a"></a></li>
-                <li><a onClick={sectonbtn} className="effect hover-text serviceBtn a"></a></li>
-                <li><a href="case.html" className="effect hover-text case a" ></a></li>
-                <li><a href="/Contact" className="effect hover-text contact a"></a></li>
+                <li><NavLink to="/About" className="effect hover-text about a"></NavLink></li>
+                <li><NavLink to="" onClick={sectonbtn} className="effect hover-text serviceBtn a"></NavLink></li>
+                <li><NavLink to="/Case" className="effect hover-text case a" ></NavLink></li>
+                <li><NavLink to="/Contact" className="effect hover-text contact a"></NavLink></li>
               </ul>
             </div>
             <div className="flex" onClick={toggleTheme}>
@@ -107,16 +108,16 @@ const Header = () => {
                 <h3>Secure your business - reach out to us now!</h3>
               </div>
               <div className="gridItem gridFlex">
-                <a href="" className="serviceLinks">
+                <Link to="/" className="serviceLinks">
                   <img src="src/assets/Group (2).svg" alt="" />
                   <h3>UI & UX Designing</h3>
-                </a>
+                </Link>
               </div>
               <div className="gridItem gridFlex">
-                <a href="#" className="serviceLinks">
+                <Link to="/" className="serviceLinks">
                   <img src="src/assets/Wrench_1_.svg" alt="" />
                   <h3>web maintenance</h3>
-                </a>
+                </Link>
               </div>
               <div className="gridItem gaqdiv">
                 <div className="btn">
@@ -125,16 +126,16 @@ const Header = () => {
                 </div>
               </div>
               <div className="gridItem gridFlex">
-                <a href="#" className="serviceLinks">
+                <Link to="/" className="serviceLinks">
                   <img src="src/assets/code-svgrepo-com 1.svg" alt="" />
                   <h3>web development</h3>
-                </a>
+                </Link>
               </div>
               <div className="gridItem gridFlex">
-                <a href="#" className="serviceLinks">
+                <Link to="/" className="serviceLinks">
                   <img src="src/assets/fingerprint-svgrepo-com 1 (1).svg" alt="" />
                   <h3>web security</h3>
-                </a>
+                </Link>
               </div>
             </div>
           </div>

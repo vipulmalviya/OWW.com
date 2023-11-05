@@ -192,7 +192,7 @@ const Home = () => {
                     <input type="text" placeholder="Name" className="name" />
                     <input type="email" placeholder="Email" required className="email" />
                   </div>
-                  <textarea name="message" id="" className="message" placeholder="Message" required></textarea>
+                  <textarea name="message" id="" rows={8} cols={60} className="message" placeholder="Message" required></textarea>
                   <button type="submit" className="submit">
                     <div className="btn">
                       <span className="btnVisible">get a quote <i className="bx bx-chevron-right"></i></span>
