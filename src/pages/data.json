@@ -1,0 +1,324 @@
+{
+    "Categories": {
+        "allcards": [
+            {
+                "id": "1",
+                "clientName": "Satyam Bhuyan",
+                "category": "allcards",
+                "startDate": "2023-01-01",
+                "finishDate": "2023-02-01",
+                "title": "Satyam Bhuyan",
+                "images": [
+                    "/src/assets/satyamfull.jpg",
+                    "/src/assets/satyamfull2.jpg",
+                    "/src/assets/satyamfull3.jpg"
+                ]
+            },
+            {
+                "id": "2",
+                "clientName": "Old World Web",
+                "category": "UI_UX_Design",
+                "startDate": "2023-02-01",
+                "finishDate": "2023-03-01",
+                "title": "Old World Web",
+                "images": [
+                    "/src/assets/owwfull.jpg",
+                    "/src/assets/owwfull2.jpg",
+                    "/src/assets/owwfull3.jpg"
+                ]
+            },
+            {
+                "id": "3",
+                "clientName": "refine creation",
+                "category": "UI_UX_Design",
+                "startDate": "2023-03-01",
+                "finishDate": "2023-04-01",
+                "title": "refine creation",
+                "images": [
+                    "/src/assets/refinefull.jpg",
+                    "/src/assets/refinefull.jpg",
+                    "/src/assets/refinefull.jpg"
+                ]
+            },
+            {
+                "id": "4",
+                "clientName": "Astro Ashtangini",
+                "category": "allcards",
+                "startDate": "2023-03-01",
+                "finishDate": "2023-04-01",
+                "title": "Astro Ashtangini",
+                "images": [
+                    "/src/assets/astrofull.png",
+                    "/src/assets/astro2.jpg",
+                    "/src/assets/astro3.jpg"
+                ]
+            },
+            {
+                "id": "5",
+                "clientName": "Stephanie Coudray",
+                "category": "allcards",
+                "startDate": "2023-03-01",
+                "finishDate": "2023-04-01",
+                "title": "Stephanie Coudray",
+                "images": [
+                    "/src/assets/stephaniefull.jpg",
+                    "/src/assets/stephaniefull3.jpg",
+                    "/src/assets/stephaniefull2.jpg"
+                ]
+            },
+            {
+                "id": "6",
+                "clientName": "Astro Ashtangini",
+                "category": "allcards",
+                "startDate": "2023-03-01",
+                "finishDate": "2023-04-01",
+                "title": "Astro Ashtangini",
+                "images": [
+                    "/src/assets/astrofull.png",
+                    "/src/assets/astro2.jpg",
+                    "/src/assets/astro3.jpg"
+                ]
+            }
+        ],
+        "UI_UX_Design": [
+            {
+                "id": "1",
+                "clientName": "Satyam Bhuyan",
+                "category": "UI_UX_Design",
+                "startDate": "2023-01-01",
+                "finishDate": "2023-02-01",
+                "title": "Satyam Bhuyan",
+                "images": [
+                    "/src/assets/satyamfull.jpg",
+                    "/src/assets/satyamfull2.jpg",
+                    "/src/assets/satyamfull3.jpg"
+                ]
+            },
+            {
+                "id": "2",
+                "clientName": "Old World Web",
+                "category": "UI_UX_Design",
+                "startDate": "2023-02-01",
+                "finishDate": "2023-03-01",
+                "title": "Old World Web",
+                "images": [
+                    "/src/assets/owwfull.jpg",
+                    "/src/assets/owwfull2.jpg",
+                    "/src/assets/owwfull3.jpg"
+                ]
+            },
+            {
+                "id": "3",
+                "clientName": "refine creation",
+                "category": "UI_UX_Design",
+                "startDate": "2023-03-01",
+                "finishDate": "2023-04-01",
+                "title": "refine creation",
+                "images": [
+                    "/src/assets/refinefull.jpg",
+                    "/src/assets/refinefull.jpg",
+                    "/src/assets/refinefull.jpg"
+                ]
+            },
+            {
+                "id": "4",
+                "clientName": "Astro Ashtangini",
+                "category": "UI_UX_Design",
+                "startDate": "2023-03-01",
+                "finishDate": "2023-04-01",
+                "title": "Astro Ashtangini",
+                "images": [
+                    "/src/assets/astrofull.png",
+                    "/src/assets/astro2.jpg",
+                    "/src/assets/astro3.jpg"
+                ]
+            },
+            {
+                "id": "5",
+                "clientName": "Astro Ashtangini",
+                "category": "UI_UX_Design",
+                "startDate": "2023-03-01",
+                "finishDate": "2023-04-01",
+                "title": "Astro Ashtangini",
+                "images": [
+                    "/src/assets/astrofull.png",
+                    "/src/assets/astro2.jpg",
+                    "/src/assets/astro3.jpg"
+                ]
+            },
+            {
+                "id": "6",
+                "clientName": "Astro Ashtangini",
+                "category": "UI_UX_Design",
+                "startDate": "2023-03-01",
+                "finishDate": "2023-04-01",
+                "title": "Astro Ashtangini",
+                "images": [
+                    "/src/assets/astrofull.png",
+                    "/src/assets/astro2.jpg",
+                    "/src/assets/astro3.jpg"
+                ]
+            }
+        ],
+        "E-commerce": [
+            {
+                "id": "1",
+                "clientName": "Client 2",
+                "category": "E-commerce",
+                "startDate": "2023-02-01",
+                "finishDate": "2023-03-01",
+                "title": "Project 2",
+                "images": [
+                    "image4.jpg",
+                    "image5.jpg",
+                    "image6.jpg"
+                ]
+            },
+            {
+                "id": "2",
+                "clientName": "Client 2",
+                "category": "E-commerce",
+                "startDate": "2023-02-01",
+                "finishDate": "2023-03-01",
+                "title": "Project 2",
+                "images": [
+                    "image4.jpg",
+                    "image5.jpg",
+                    "image6.jpg"
+                ]
+            },
+            {
+                "id": "3",
+                "clientName": "Client 2",
+                "category": "E-commerce",
+                "startDate": "2023-02-01",
+                "finishDate": "2023-03-01",
+                "title": "Project 2",
+                "images": [
+                    "image4.jpg",
+                    "image5.jpg",
+                    "image6.jpg"
+                ]
+            },
+            {
+                "id": "4",
+                "clientName": "Client 2",
+                "category": "E-commerce",
+                "startDate": "2023-02-01",
+                "finishDate": "2023-03-01",
+                "title": "Project 2",
+                "images": [
+                    "image4.jpg",
+                    "image5.jpg",
+                    "image6.jpg"
+                ]
+            },
+            {
+                "id": "5",
+                "clientName": "Client 2",
+                "category": "E-commerce",
+                "startDate": "2023-02-01",
+                "finishDate": "2023-03-01",
+                "title": "Project 2",
+                "images": [
+                    "image4.jpg",
+                    "image5.jpg",
+                    "image6.jpg"
+                ]
+            },
+            {
+                "id": "6",
+                "clientName": "Client 2",
+                "category": "E-commerce",
+                "startDate": "2023-02-01",
+                "finishDate": "2023-03-01",
+                "title": "Project 2",
+                "images": [
+                    "image4.jpg",
+                    "image5.jpg",
+                    "image6.jpg"
+                ]
+            }
+        ],
+        "Security": [
+            {
+                "id": "1",
+                "clientName": "Client 3",
+                "category": "Security",
+                "startDate": "2023-03-01",
+                "finishDate": "2023-04-01",
+                "title": "Project 3",
+                "images": [
+                    "image7.jpg",
+                    "image8.jpg",
+                    "image9.jpg"
+                ]
+            },
+            {
+                "id": "2",
+                "clientName": "Client 3",
+                "category": "Security",
+                "startDate": "2023-03-01",
+                "finishDate": "2023-04-01",
+                "title": "Project 3",
+                "images": [
+                    "image7.jpg",
+                    "image8.jpg",
+                    "image9.jpg"
+                ]
+            },
+            {
+                "id": "3",
+                "clientName": "Client 3",
+                "category": "Security",
+                "startDate": "2023-03-01",
+                "finishDate": "2023-04-01",
+                "title": "Project 3",
+                "images": [
+                    "image7.jpg",
+                    "image8.jpg",
+                    "image9.jpg"
+                ]
+            },
+            {
+                "id": "4",
+                "clientName": "Client 3",
+                "category": "Security",
+                "startDate": "2023-03-01",
+                "finishDate": "2023-04-01",
+                "title": "Project 3",
+                "images": [
+                    "image7.jpg",
+                    "image8.jpg",
+                    "image9.jpg"
+                ]
+            },
+            {
+                "id": "5",
+                "clientName": "Client 3",
+                "category": "Security",
+                "startDate": "2023-03-01",
+                "finishDate": "2023-04-01",
+                "title": "Project 3",
+                "images": [
+                    "image7.jpg",
+                    "image8.jpg",
+                    "image9.jpg"
+                ]
+            },
+            {
+                "id": "6",
+                "clientName": "Client 3",
+                "category": "Security",
+                "startDate": "2023-03-01",
+                "finishDate": "2023-04-01",
+                "title": "Project 3",
+                "images": [
+                    "image7.jpg",
+                    "image8.jpg",
+                    "image9.jpg"
+                ]
+            }
+        ]
+    }
+}

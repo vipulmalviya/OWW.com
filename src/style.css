@@ -206,6 +206,7 @@ img {
 .sectionTitle::after {
   content: ".";
   color: var(--accesnt-color);
+  margin-left: -1rem;
 }
 
 .solution::after {
@@ -238,6 +239,13 @@ img {
 
 .flex {
   display: flex;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 }
 
 .aling-left {
@@ -396,8 +404,12 @@ li a {
 }
 
 /* modes effcts */
-.daynight,
-.daynight2 {
+.dnfooter {
+  display: none !important;
+}
+
+.daynight {
+  top: 6px;
   height: 100%;
   margin-right: 1rem;
   cursor: pointer;
@@ -533,8 +545,10 @@ hr {
   /* background-color: red; */
   display: flex;
   align-items: center;
-  justify-content: baseline;
+  justify-content: space-between;
+  font-size: 1.1rem;
 }
+
 
 .gridItem a {
   white-space: nowrap;
@@ -562,7 +576,8 @@ hr {
 }
 
 .serviceLinks img {
-  width: 17%;
+  width: 50px;
+  margin-right: 1rem;
 }
 
 /* heroSection */
@@ -830,6 +845,9 @@ hr {
 
 .aboutImg {
   width: 45%;
+  border: 2px solid black;
+  border-radius: 25px;
+  background: white;
 }
 
 .aboutText {
@@ -882,7 +900,7 @@ hr {
 }
 
 .sectionBtn a {
-  color: var(--accesnt-color);
+  color: var(--accesnt-color) !important;
   font-size: var(--h3-font-size);
   text-transform: uppercase;
   font-weight: var(--font-normal);
@@ -1118,6 +1136,11 @@ hr {
   top: 2%;
 }
 
+.contactillu {
+  border: 2px solid black;
+  border-radius: 25px;
+  background: white;
+}
 .contactImg,
 .chooseBox {
   width: 45%;
@@ -1129,27 +1152,26 @@ hr {
 }
 
 /* form */
-
 .name,
 .email,
-.massage {
-  outline: none;
+.message {
+  outline: none !important;
   border: none;
   width: 45%;
   padding: 1rem 0;
   background-color: transparent;
-  border-bottom: 1px solid var(--text-color);
+  border-bottom: 1px solid var(--text-color) !important;
   margin: 1rem 0;
   color: var(--header-height);
 }
+
 
 .name.email.massage:active {
   color: var(--text-color);
 }
 
-.massage {
+.message {
   width: 100%;
-
 }
 
 .inputs {
@@ -1290,7 +1312,8 @@ button {
 
 .caseSlide1,
 .caseSlide2,
-.caseSlide3 {
+.caseSlide3,
+.caseSlide4 {
   position: relative;
   display: flex;
   align-items: end;
@@ -1303,21 +1326,27 @@ button {
 }
 
 .caseSlide1 {
-  background: url("src/assets/sb.png") no-repeat;
+  background: url("/src/assets/sb.png") no-repeat;
   background-position: top center;
   background-size: cover;
 
 }
 
 .caseSlide2 {
-  background: url("src/assets/oww.png") no-repeat;
+  background: url("/src/assets/oww.png") no-repeat;
   background-position: top center;
   background-size: cover;
 
 }
 
 .caseSlide3 {
-  background: url("src/assets/refine.png") no-repeat;
+  background: url("/src/assets/refine.png") no-repeat;
+  background-position: top center;
+  background-size: cover;
+
+}
+.caseSlide4 {
+  background: url("/src/assets/stepanie.png") no-repeat;
   background-position: top center;
   background-size: cover;
 
@@ -1335,16 +1364,17 @@ button {
   width: 100%;
   transform: translateY(150%);
   position: absolute;
-  color: white;
+  color: white !important;
   transition: cubic-bezier(0.075, 0.82, 0.165, 1)1s;
 }
-
-.caseInfo h3 {
+.caseInfo>p{
   color: white !important;
 }
-
+.caseInfo>h3{
+  color: white !important;
+}
 .caseSlide:hover .caseInfo {
-  display: block;
+  /* display: block; */
   transform: translateY(0%);
   background: linear-gradient(transparent 0%, black 100%);
 }
@@ -1357,11 +1387,11 @@ button {
 }
 
 .effect.hover-text.arrowIcon::after {
-  content: url(src/assets/Frame\ 18.svg);
+  content: url(/src/assets/Frame\ 18.svg);
 }
 
 .effect.hover-text.arrowIcon::before {
-  content: url(src/assets/Arrow\ 1.svg);
+  content: url(/src/assets/Arrow\ 1.svg);
 }
 
 /* 
@@ -1439,7 +1469,7 @@ button {
   width: 45%;
   height: 70vh;
   /* background-color: #fff; */
-  background-image: linear-gradient(transparent, black), url(src/assets/Rectangle\ 26.png);
+  background-image: linear-gradient(transparent, black), url(/src/assets/Rectangle\ 26.png);
   background-position: center;
   background-size: cover;
   margin: 4rem 0;
@@ -1503,7 +1533,7 @@ button {
 }
 
 .contactImg {
-  background-image: url("src/./assets/Rectangle\ 32.png");
+  background-image: url("/src/assets/Rectangle\ 32.png");
   width: 500px;
   height: 500px;
   background-position: center;
@@ -1698,6 +1728,7 @@ a {
 
 .active {
   right: 0%;
+  z-index: 2;
 }
 
 .sidebarcol {
@@ -1707,6 +1738,7 @@ a {
 
 
 .demo {
+  display: flex;
   position: absolute;
   top: 0;
   left: 0;
@@ -1755,9 +1787,9 @@ a {
   color: var(--text-color);
 }
 
-/* .owl-carousel.owl-drag .owl-item {
+.owl-carousel.owl-drag .owl-item {
   height: 100%;
-} */
+}
 
 .owl-carousel2 {
   overflow: hidden;
@@ -1851,6 +1883,8 @@ a {
   grid-template-columns: auto auto;
   grid-template-rows: auto auto;
   row-gap: 3rem;
+  column-gap: 15rem;
+
 }
 
 .ahadding {
@@ -1891,7 +1925,7 @@ a:active {
   left: 50%;
   transform: translate(-50%, -50%);
   position: absolute;
-  background-color: #9747ff;
+  background-color: var(--accesnt-color) !important;
   bottom: 0;
 }
 
@@ -1940,12 +1974,10 @@ a:active {
 }
 
 .protfolio {
-  /* min-height: 120vh; */
   width: 100%;
   background: var(--backGround-color);
-  min-height: 130vh;
+  height: 1250px;
   position: relative;
-  /* background-color: red; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1960,16 +1992,14 @@ a:active {
   width: 100%;
 }
 
-.cardContainer {
-  /* background-color: var(--backGround-color); */
+#cardContainer {
   display: grid;
   grid-template-columns: auto auto auto;
   grid-template-rows: auto auto;
-  /* align-items: center;
-  justify-content: center; */
   gap: 1rem;
   flex-wrap: wrap;
   padding: 1rem;
+  background-color: var(--backGround-color);
 }
 
 .center_card {
@@ -2246,6 +2276,7 @@ a:active {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
   }
 
   .sidebar ul {
@@ -2259,14 +2290,26 @@ a:active {
     display: none;
   }
 
+  .footerItems p,
+  a {
+    margin-bottom: 0;
+  }
+
   nav .daynight {
     display: none;
   }
 
-  .footerbtn #modes2 {
+  .dnfooter {
+    display: flex !important;
+  }
+
+  .footerbtn .dnfooter {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-left: 5rem;
+    margin-bottom: 1rem;
+
   }
 
   .footerbtn {
@@ -2311,6 +2354,13 @@ a:active {
     align-items: center;
   }
 
+  #cardContainer {
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    gap: 1rem;
+  }
+
+
 }
 
 @media screen and (max-width:840px) {
@@ -2335,16 +2385,9 @@ a:active {
   }
 
 
-  .cardContainer {
-    grid-template-columns: auto auto;
-    grid-template-rows: auto auto;
-  }
-
   .protfolio {
-    min-height: 120vh;
+    min-height: 1150px;
   }
-
-
 }
 
 
@@ -2469,6 +2512,16 @@ a:active {
   .cardContainer {
     gap: 1rem;
     padding: 1rem;
+  }
+
+  #cardContainer {
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    gap: 1rem;
+  }
+
+  .protfolio {
+    min-height: 1500px;
   }
 }
 
@@ -2767,10 +2820,6 @@ a:active {
   .abtns {
     flex-wrap: wrap;
     justify-content: space-around;
-  }
-
-  .protfolio {
-    min-height: 430vh;
   }
 
   .cardContainer {

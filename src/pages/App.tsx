@@ -1,20 +1,18 @@
-// import { Outlet } from "react-router-dom";
-// import About from "./About";
-// import Case from "./Case";
-// import Contact from "./Contact";
-import Home from "./Home";
+import { Outlet } from "react-router-dom";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import '../style.css'
 
 
 const App = () => {
   return (
     <>
       <Header />
-      <Home />
+      <Outlet />
       <Footer />
     </>
   );
 };
 
 export default App;
+ 

@@ -1,19 +1,42 @@
-import 'owl.carousel/dist/assets/owl.carousel.css';
-import 'owl.carousel/dist/assets/owl.theme.default.css';
-
-import '../style.css'
-
+import ServiceSlider from "../components/ServiceSlider";
+import CaseSlider from "../components/CaseSlider";
+import { useState, useRef } from "react";
+import GetQuotebtn from "../components/GetQuotebtn";
+// import toggleTheme from "../components/Header.tsx"
 const Home = () => {
 
+  const [isPlaying, setIsPlaying] = useState(false);
+  const videoRef = useRef(null);
 
+  const toggleVideo = () => {
+    const video = videoRef.current as HTMLVideoElement | null;
+  
+    if (video) {
+      if (isPlaying) {
+        video.muted = true;
+        video.autoplay = false;
+        video.currentTime = 0;
+      } else {
+        video.muted = false;
+        video.autoplay = true;
+        video.currentTime = 0;
+      }
+  
+      setIsPlaying(!isPlaying);
+    }
+  };
+  
+
+
+  
   return (
     <div>
       <main id="main">
         {/* <!-- heroSection --> */}
         <section className="section">
-          <div className="demo flex">
+          <div className={isPlaying ? "demo on" : "demo"} onClick={toggleVideo}>
             <div className="vid">
-              <video className="vids" src="src/assets/OWW Post.mp4" loop={true}></video>
+              <video className="vids" ref={videoRef} src="/src/assets/OWW Post.mp4"></video>
             </div>
           </div>
           <div className="container hero">
@@ -36,7 +59,7 @@ const Home = () => {
                   </p>
                 </div>
                 <div className="mainbutton flexcenter">
-                  <div className="heroBtn playb">
+                  <div className="heroBtn playb"  onClick={toggleVideo}>
                     <div className="play">
                       <div className="playBtn">
                         <i className="bx bx-play"></i>
@@ -47,8 +70,8 @@ const Home = () => {
                 </div>
               </div>
               <div className="heroImg flex">
-                <img className="img1 img" src="src/assets/Group 3.svg" alt="" />
-                <img className="img2 img" src="src/assets/Group 2.svg" alt="" />
+                <img className="img1 img" src="/src/assets/Group 3.svg" alt="" />
+                <img className="img2 img" src="/src/assets/Group 2.svg" alt="" />
               </div>
             </div>
           </div>
@@ -60,7 +83,7 @@ const Home = () => {
           <div className="container aboutContainer">
             <div className="flex aboutSection">
               <div className="aboutImg">
-                <img className="abimg" src="src/assets/aboutus.svg" alt="" />
+                <img className="abimg" src="src/assets/aboutus=img.png" alt="" />
               </div>
               <div className="aboutText">
                 <h4 className="lable lable2 flex">
@@ -85,92 +108,7 @@ const Home = () => {
 
         <section className="section" id="serv">
           <div className="container service">
-            <div className="flex col serviceGrid">
-              <div className="flex topcase">
-                <div className="serviceGridBox">
-                  <h4 className="lable lable2 flex">
-                    <span className="flexcenter textspan"><span className="line"></span></span>
-                    service
-                  </h4>
-                  <div className="sectionTitle">Crafting, Securing, and Elevating your Online Presence</div>
-                  <p className="p">
-                    Empowering web solutions: development, design, security, maintenance. Elevate your online presence with us.
-                  </p>
-                </div>
-                <div className="serviceGridBox carousalBoxBtn">
-                  <div className="carousalBtn">
-                    <div className="preBtn" id="prevBtn">prev</div>
-                    <div className="nextBtn" id="nextBtn">next</div>
-                  </div>
-                </div>
-              </div>
-              <div className="slider">
-                <div className="owl-carousel carousel-one">
-                  <div className="slide">
-                    <div className="iconImg">
-                      <img src="src/assets/big-paint-brush-svgrepo-com 1.svg" alt="" />
-                    </div>
-                    <div className="cent flex">
-                      <h2>ui & ux designing</h2>
-                      <p>
-                        Crafting immersive interfaces that delight users. Elevate engagement with seamless design, intuitive
-                        navigation, and captivating visuals.
-                      </p>
-                    </div>
-                    <div className="effect hover-text readMore">
-                      <a href=""></a>
-                    </div>
-                  </div>
-
-                  <div className="slide">
-                    <div className="iconImg">
-                      <img src="src/assets/code-svgrepo-comwhite 1.svg" alt="" />
-                    </div>
-                    <div className="cent flex">
-                      <h2>web development</h2>
-                      <p>
-                        Turning ideas into digital reality. Expert coding, responsive design, and scalable solutions that
-                        empower your online vision.
-                      </p>
-                    </div>
-                    <div className="effect hover-text readMore">
-                      <a href=""></a>
-                    </div>
-                  </div>
-
-                  <div className="slide">
-                    <div className="iconImg">
-                      <img src="src/assets/maintenance-mechanic-repair-svgrepo-com 1.svg" alt="" />
-                    </div>
-                    <div className="cent flex">
-                      <h2>web maintenance</h2>
-                      <p>
-                        Sustain digital excellence effortlessly. Timely updates, bug fixes, and optimizations to keep your
-                        website running flawlessly.
-                      </p>
-                    </div>
-                    <div className="effect hover-text readMore">
-                      <a href=""></a>
-                    </div>
-                  </div>
-                  <div className="slide">
-                    <div className="iconImg">
-                      <img src="src/assets/fingerprint-svgrepo-com 1.svg" alt="" />
-                    </div>
-                    <div className="cent flex">
-                      <h2>web security</h2>
-                      <p>
-                        Shielding your digital fortress. Robust security protocols, encryption, and vigilant monitoring to
-                        safeguard your data and user trust.
-                      </p>
-                    </div>
-                    <div className="effect hover-text readMore">
-                      <a href=""></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+               <ServiceSlider />
           </div>
         </section>
         <hr />
@@ -192,17 +130,14 @@ const Home = () => {
                     <input type="text" placeholder="Name" className="name" />
                     <input type="email" placeholder="Email" required className="email" />
                   </div>
-                  <textarea name="message" id="" rows={8} cols={60} className="message" placeholder="Message" required></textarea>
+                  <textarea name="message" id="" rows={5} cols={60} className="message" placeholder="Message" required></textarea>
                   <button type="submit" className="submit">
-                    <div className="btn">
-                      <span className="btnVisible">get a quote <i className="bx bx-chevron-right"></i></span>
-                      <span className="btnInVisible">get a quote <i className="bx bx-chevron-right"></i></span>
-                    </div>
+                  <GetQuotebtn text="Get A Quote" />
                   </button>
                 </form>
               </div>
               <div className="contactillu">
-                <img className="sentm" src="src/assets/sentm.svg" alt="" />
+                <img className="sentm" src="/src/assets/sentm.svg" alt="" />
               </div>
             </div>
           </div>
@@ -275,61 +210,7 @@ const Home = () => {
 
         <section className="section" id="case">
           <div className="container containerCase">
-            <div className="flex col caseSection">
-              <div className="flex topcase">
-                <div className="caseItems">
-                  <h4 className="lable lable2 flex">
-                    <span className="flexcenter textspan"><span className="line"></span></span>
-                    let's get started
-                  </h4>
-                  <div className="sectionTitle">our latest cases</div>
-                  <p className="casep p">we always try to improve our creative ideas at the highest level. you can see it by looking at the portfolio.</p>
-                </div>
-                <div className="caseItems carousalBoxBtn">
-                  <div className="col2 flex">
-                    <div className="sectionBtn caseBtn"><a href="case.html">see all cases</a></div>
-                    <div className="carousalBtn">
-                      <div className="preBtn" id="cprevBtn">prev</div>
-                      <div className="nextBtn" id="cnextBtn">next</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="caseSlider">
-                <div className="owl-carousel">
-                  <div className="caseSlide1 caseSlide">
-                    <video className="vid" src="src/assets/SB.mp4"></video>
-                    <div className="caseInfo">
-                      <h3>Satyam Bhuyaan</h3>
-                      <p style={{ color: 'white !important' }}>Web development</p>
-                      <a href="https://satyambhuyan.com/">
-                        <span className="effect hover-text arrowIcon"><span></span></span>
-                      </a>
-                    </div>
-                  </div>
-                  <div className="caseSlide2 caseSlide">
-                    <video className="vid" src="src/assets/OWW.mp4"></video>
-                    <div className="caseInfo">
-                      <h3>OldWorldWeb</h3>
-                      <p style={{ color: 'white !important' }}>Web development</p>
-                      <a href="https://www.oldworldweb.com/">
-                        <span className="effect hover-text arrowIcon"><span></span></span>
-                      </a>
-                    </div>
-                  </div>
-                  <div className="caseSlide3 caseSlide">
-                    <video className="vid" src="src/assets/Refine.mp4"></video>
-                    <div className="caseInfo">
-                      <h3>Refine Creations</h3>
-                      <p style={{ color: 'white !important' }}>Web development</p>
-                      <a href="https://refinecreations.com/">
-                        <span className="effect hover-text arrowIcon"><span></span></span>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <CaseSlider />
           </div>
         </section>
         <hr />
