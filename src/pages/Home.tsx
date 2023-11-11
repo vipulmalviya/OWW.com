@@ -1,9 +1,39 @@
 import ServiceSlider from "../components/ServiceSlider";
 import CaseSlider from "../components/CaseSlider";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import GetQuotebtn from "../components/GetQuotebtn";
-// import toggleTheme from "../components/Header.tsx"
+
 const Home = () => {
+
+  useEffect(() => {
+    const img1 = document.querySelector(".img1") as HTMLImageElement | null;
+    const img2 = document.querySelector(".img2") as HTMLImageElement | null;
+    const img3 = document.querySelector(".abimg") as HTMLImageElement | null;
+    const img4 = document.querySelector(".sentm") as HTMLImageElement | null;
+
+    const updateImageSources = () => {
+      const isDarkMode = document.body.classList.contains("dark-theme");
+
+      if (img1 && img2 && img3 && img4) {
+        if (isDarkMode) {
+          img1.src = "/src/assets/Hero-img.png";
+          img2.src = "/src/assets/Hero-img.png";
+          img3.src = "/src/assets/aboutus=img.png";
+          img4.src = "/src/assets/Sent Message-cuate 1.svg";
+        } else {
+          img1.src = "/src/assets/Group 2.svg";
+          img2.src = "/src/assets/Group 3.svg";
+          img3.src = "/src/assets/Application programming interface-pana.png";
+          img4.src = "/src/assets/sentm.svg";
+        }
+      }
+    };
+    updateImageSources();
+    const bodyObserver = new MutationObserver(updateImageSources);
+    bodyObserver.observe(document.body, { attributes: true, attributeFilter: ["class"] });
+    return () => bodyObserver.disconnect();
+  }, []);
+
 
   const [isPlaying, setIsPlaying] = useState(false);
   const videoRef = useRef(null);
@@ -26,8 +56,6 @@ const Home = () => {
     }
   };
   
-
-
   
   return (
     <div>
@@ -70,8 +98,8 @@ const Home = () => {
                 </div>
               </div>
               <div className="heroImg flex">
-                <img className="img1 img" src="/src/assets/Group 3.svg" alt="" />
                 <img className="img2 img" src="/src/assets/Group 2.svg" alt="" />
+                <img className="img1 img" src="/src/assets/Group 3.svg" alt="" />
               </div>
             </div>
           </div>
@@ -83,7 +111,7 @@ const Home = () => {
           <div className="container aboutContainer">
             <div className="flex aboutSection">
               <div className="aboutImg">
-                <img className="abimg" src="src/assets/aboutus=img.png" alt="" />
+                <img className="abimg" src="/src/assets/aboutus=img.png" alt="" />
               </div>
               <div className="aboutText">
                 <h4 className="lable lable2 flex">

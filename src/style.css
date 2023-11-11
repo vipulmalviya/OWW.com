@@ -57,6 +57,13 @@
   --box-shodow: "";
   --box-gradian: radial-gradient(circle, rgba(148, 187, 233, 1) 0%, rgba(238, 174, 202, 1) 100%);
 }
+.light-theme {
+  --priamry-color: #fff;
+  --accesnt-color: #9747ff;
+  --heading-color: #030303;
+  --text-color: #888585;
+  --backGround-color: #F6EFFF;
+}
 
 
 /* Responsive typography */
@@ -845,9 +852,6 @@ hr {
 
 .aboutImg {
   width: 45%;
-  border: 2px solid black;
-  border-radius: 25px;
-  background: white;
 }
 
 .aboutText {
@@ -1136,11 +1140,6 @@ hr {
   top: 2%;
 }
 
-.contactillu {
-  border: 2px solid black;
-  border-radius: 25px;
-  background: white;
-}
 .contactImg,
 .chooseBox {
   width: 45%;
