@@ -57,6 +57,7 @@
   --box-shodow: "";
   --box-gradian: radial-gradient(circle, rgba(148, 187, 233, 1) 0%, rgba(238, 174, 202, 1) 100%);
 }
+
 .light-theme {
   --priamry-color: #fff;
   --accesnt-color: #9747ff;
@@ -93,6 +94,12 @@
   }
 }
 
+@media screen and (max-width: 428px) {
+  :root {
+    --sp-font-size: 0.7rem;
+  }
+}
+
 /* BASE */
 * {
   margin: 0;
@@ -100,7 +107,6 @@
   box-sizing: border-box;
 }
 
-html,
 body {
   scroll-behavior: smooth;
   overflow-x: hidden;
@@ -196,10 +202,7 @@ img {
   font-size: var(--big-font-size);
   color: var(--heading-color);
   font-weight: var(--font-semi-bold);
-  /* margin-bottom: var(--mb-1); */
-  /* line-height: 5.501rem; */
-  /* text-transform: capitalize; */
-  /* white-space: nowrap; */
+
 }
 
 .sectionTitleN {
@@ -213,7 +216,7 @@ img {
 .sectionTitle::after {
   content: ".";
   color: var(--accesnt-color);
-  margin-left: -1rem;
+  margin-left: 0rem;
 }
 
 .solution::after {
@@ -549,7 +552,6 @@ hr {
   padding: 1rem;
   height: 10vh;
   width: 100%;
-  /* background-color: red; */
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -916,7 +918,7 @@ hr {
 .sectionBtn::after {
   content: "";
   width: 0;
-  height: 1px;
+  height: .5px;
   margin-top: 0.625rem;
   background-color: var(--accesnt-color);
   display: block;
@@ -925,7 +927,7 @@ hr {
 
 .sectionBtn:hover::after {
   content: "";
-  height: 1px;
+  height: 0.5px;
   width: 100%;
   background-color: var(--accesnt-color);
   display: block;
@@ -1027,25 +1029,25 @@ hr {
 }
 
 .preBtn {
-  border-bottom: 2px solid var(--text-color);
+  border-bottom: 1px solid var(--text-color);
   width: 45%;
   transition: all 0.8s;
 }
 
 .preBtn:hover {
-  border-bottom: 2px solid var(--text-color);
+  border-bottom: 1px solid var(--text-color);
   width: 30%;
 }
 
 .nextBtn {
   text-align: right;
-  border-bottom: 2px solid var(--text-color);
+  border-bottom: 1px solid var(--text-color);
   width: 45%;
   transition: all 0.8s;
 }
 
 .nextBtn:hover {
-  border-bottom: 2px solid var(--text-color);
+  border-bottom: 1px solid var(--text-color);
   width: 30%;
 }
 
@@ -1344,6 +1346,7 @@ button {
   background-size: cover;
 
 }
+
 .caseSlide4 {
   background: url("/src/assets/stepanie.png") no-repeat;
   background-position: top center;
@@ -1366,12 +1369,15 @@ button {
   color: white !important;
   transition: cubic-bezier(0.075, 0.82, 0.165, 1)1s;
 }
-.caseInfo>p{
+
+.caseInfo>p {
   color: white !important;
 }
-.caseInfo>h3{
+
+.caseInfo>h3 {
   color: white !important;
 }
+
 .caseSlide:hover .caseInfo {
   /* display: block; */
   transform: translateY(0%);
@@ -1692,7 +1698,7 @@ a {
   position: absolute;
   top: 1rem;
   right: 2rem;
-  border: 2px solid var(--accesnt-color);
+  border: 1px solid var(--accesnt-color);
   color: var(--text-color);
   padding: 1rem 2rem;
 }
@@ -1828,28 +1834,28 @@ a {
 }
 
 .CpreBtn {
-  border-bottom: 2px solid var(--text-color);
-  width: 100px;
+  border-bottom: 1px solid var(--text-color);
+  width: 80px;
   transition: all 0.8s;
   cursor: pointer;
 }
 
 .CpreBtn:hover {
-  border-bottom: 2px solid var(--text-color);
-  width: 50px;
+  border-bottom: 1px solid var(--text-color);
+  width: 40px;
 }
 
 .CnextBtn {
   text-align: right;
-  border-bottom: 2px solid var(--text-color);
-  width: 100px;
+  border-bottom: 1px solid var(--text-color);
+  width: 80px;
   transition: all 0.8s;
   cursor: pointer;
 }
 
 .CnextBtn:hover {
-  border-bottom: 2px solid var(--text-color);
-  width: 50px;
+  border-bottom: 1px solid var(--text-color);
+  width: 40px;
 }
 
 /* about project styling */
@@ -1873,7 +1879,7 @@ a {
 
 .sectiondesc {
   color: var(--text-color);
-  font-size: 1rem;
+  font-size: var(--h3-font-size);
   margin-bottom: 1rem;
 }
 
@@ -2503,9 +2509,11 @@ a:active {
   }
 
   .projectdetails {
+    width: 100%;
     grid-template-columns: auto;
     grid-template-rows: auto;
     row-gap: 1rem;
+    justify-content: space-between;
   }
 
   .cardContainer {

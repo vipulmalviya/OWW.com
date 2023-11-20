@@ -42,21 +42,30 @@ const Header = () => {
   function menubtn() {
     const sidebar = document.querySelector(".sidebar");
     if (sidebar) {
-      sidebar.classList.toggle("active");
+      document.body.style.overflow = (sidebar.classList.toggle("active")) ? 'hidden' : 'auto';
     }
   }
 
   function closebtn() {
     const sidebar = document.querySelector(".sidebar");
     if (sidebar) {
-      sidebar.classList.toggle("active");
+      document.body.style.overflow = (sidebar.classList.toggle("active")) ? 'hidden' : 'auto';
     }
   }
-
-
-
-
-
+  function menuitem() {
+    const menuItems = document.querySelectorAll(".a");
+    const sidebar = document.querySelector(".sidebar");
+  
+    menuItems.forEach((menuItem) => {
+      menuItem.addEventListener("click", () => {
+        if (sidebar) {
+          sidebar.classList.remove("active");
+          document.body.style.overflow = sidebar.classList.contains("active") ? 'hidden' : 'auto';
+        }
+      });
+    });
+  }
+  
 
   return (
     <>
@@ -64,23 +73,23 @@ const Header = () => {
         <div className="flex sidebarcol">
           <div className="sidebar">
             <ul className="text-container">
-              <li>
+              <li onClick={menuitem}>
                 <Link
                   to="/About"
                   className="effect hover-text about a"
                   id="page1"
                 ></Link>
               </li>
-              <li>
+              <li onClick={menuitem}>
                 <Link
                   to="#serv"
                   className="effect hover-text serviceBtn2 a"
                 ></Link>
               </li>
-              <li>
+              <li onClick={menuitem}>
                 <Link to="/Case" className="effect hover-text case a"></Link>
               </li>
-              <li>
+              <li onClick={menuitem}>
                 <Link
                   to="/Contact"
                   className="effect hover-text contact a"

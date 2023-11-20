@@ -1,7 +1,9 @@
 import ServiceSlider from "../components/ServiceSlider";
 import CaseSlider from "../components/CaseSlider";
 import { useState, useRef, useEffect } from "react";
-import GetQuotebtn from "../components/GetQuotebtn";
+import Contactform from "../components/Contactform";
+import Contactemail from "../components/Contactemail";
+
 
 const Home = () => {
 
@@ -40,7 +42,7 @@ const Home = () => {
 
   const toggleVideo = () => {
     const video = videoRef.current as HTMLVideoElement | null;
-  
+
     if (video) {
       if (isPlaying) {
         video.muted = true;
@@ -51,12 +53,12 @@ const Home = () => {
         video.autoplay = true;
         video.currentTime = 0;
       }
-  
+
       setIsPlaying(!isPlaying);
     }
   };
-  
-  
+
+
   return (
     <div>
       <main id="main">
@@ -87,7 +89,7 @@ const Home = () => {
                   </p>
                 </div>
                 <div className="mainbutton flexcenter">
-                  <div className="heroBtn playb"  onClick={toggleVideo}>
+                  <div className="heroBtn playb" onClick={toggleVideo}>
                     <div className="play">
                       <div className="playBtn">
                         <i className="bx bx-play"></i>
@@ -136,7 +138,7 @@ const Home = () => {
 
         <section className="section" id="serv">
           <div className="container service">
-               <ServiceSlider />
+            <ServiceSlider />
           </div>
         </section>
         <hr />
@@ -153,16 +155,7 @@ const Home = () => {
                 <p className="p">
                   We always try to implement our creative ideas at the highest level. Talk to us about your project, and we'll make it work.
                 </p>
-                <form action="" className="form" method="post">
-                  <div className="flex inputs">
-                    <input type="text" placeholder="Name" className="name" />
-                    <input type="email" placeholder="Email" required className="email" />
-                  </div>
-                  <textarea name="message" id="" rows={5} cols={60} className="message" placeholder="Message" required></textarea>
-                  <button type="submit" className="submit">
-                  <GetQuotebtn text="Get A Quote" />
-                  </button>
-                </form>
+                <Contactform />
               </div>
               <div className="contactillu">
                 <img className="sentm" src="/src/assets/sentm.svg" alt="" />
@@ -238,7 +231,7 @@ const Home = () => {
 
         <section className="section" id="case">
           <div className="container containerCase">
-          <CaseSlider />
+            <CaseSlider />
           </div>
         </section>
         <hr />
@@ -318,14 +311,10 @@ const Home = () => {
                 <p className="p">
                   We are grateful to know that you are interested in our content and services. Subscribe..!
                 </p>
-                <form action="" className="newsLatterform">
-                  <input type="email" placeholder="Email" required className="email" />
-                  <div className="play">
-                    <div className="playBtn thertyfive">
-                      <i className="bx bx-send submit"></i>
-                    </div>
-                  </div>
-                </form>
+               
+
+
+                <Contactemail />
               </div>
               <div className="contactImg">
                 <div className="newsletterText">

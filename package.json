@@ -10,7 +10,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emailjs/browser": "^3.11.0",
     "boxicons": "^2.1.4",
+    "emailjs": "^4.0.3",
     "jquery": "^3.7.1",
     "owl.carousel": "^2.3.4",
     "react": "^18.2.0",

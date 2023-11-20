@@ -1,5 +1,5 @@
-import GetQuotebtn from "../components/GetQuotebtn"
-
+import Contactemail from "../components/Contactemail"
+import Contactform from "../components/Contactform"
 const Contact = () => {
   return (
     <div>
@@ -14,18 +14,7 @@ const Contact = () => {
                   we always try to implement our creative ideas at very highest level. tell us about your project and we will
                   make it work.
                 </p>
-                <form className="form">
-                <div className="flex inputs">
-                    <input type="text" placeholder="Name" className="name" />
-                    <input type="email" placeholder="Email" required className="email" />
-                  </div>
-                  <textarea name="massage" cols={50} rows={4} className="message" placeholder="Massage" required defaultValue={""} />
-                  <button type="submit">
-                    <div className="btn">
-                    <GetQuotebtn text="Get A Quote" />
-                    </div>
-                  </button>
-                </form>
+                <Contactform />
               </div>
               <div className="contactillu contacctPageCol-1">
                 <div className="contactInfoBox">
@@ -53,7 +42,7 @@ const Contact = () => {
                 <div className="contactInfoBox">
                   <div className="address">
                     <div className="addresImg">
-                      <img src="/src/assets/Vector.svg"  />
+                      <img src="/src/assets/Vector.svg" />
                     </div>
                     <div className="addressText">
                       <span className="addHead">address</span> <br />
@@ -81,16 +70,7 @@ const Contact = () => {
                 <p>
                   we are grateful to know that you are interested in our content and services, subscribe..!
                 </p>
-                <form className="newsLatterform">
-                  <input type="email" placeholder="Email" required className="email" />
-                  <button className="button" type="submit">
-                    <div className="play2">
-                      <div className="playBtn">
-                        <i className="bx bx-send" />
-                      </div>
-                    </div>
-                  </button>
-                </form>
+                <Contactemail />
               </div>
               <div className="contactImg">
                 <div className="newsletterText">
