@@ -3,9 +3,24 @@ import CaseSlider from "../components/CaseSlider";
 import { useState, useRef, useEffect } from "react";
 import Contactform from "../components/Contactform";
 import Contactemail from "../components/Contactemail";
+import { Link } from "react-router-dom";
 
 
-const Home = () => {
+interface Blog {
+  id: number;
+  imageSrc: string;
+  category: string;
+  Date: string;
+  title: string;
+  link: string;
+  content: string;
+  author: string;
+  authorPic: string;
+  tags: string[];
+}
+
+
+const Home: React.FC = () => {
 
   useEffect(() => {
     const img1 = document.querySelector(".img1") as HTMLImageElement | null;
@@ -58,6 +73,21 @@ const Home = () => {
     }
   };
 
+
+  const [popularBlogs, setPopularBlogs] = useState<Blog[]>([]);
+
+  useEffect(() => {
+    fetch("http://localhost:5000/blogs")
+      .then(res => res.json())
+      .then(data => {
+        if (Array.isArray(data.default)) {
+          setPopularBlogs(data.default.slice(0, 5));
+        } else {
+          console.error('Invalid data structure. Expected {default: Array}. Received:', data);
+        }
+      })
+      .catch(error => console.error('Error fetching blogs:', error));
+  }, []);
 
   return (
     <div>
@@ -126,7 +156,7 @@ const Home = () => {
                   security, and maintenance services. Elevate your digital presence today.
                 </p>
                 <div className="sectionBtn">
-                  <a href="">about us</a>
+                  <Link to="">about us</Link>
                 </div>
               </div>
             </div>
@@ -248,49 +278,32 @@ const Home = () => {
               <div className="sectionTitle">Latest in Tech</div>
               <p className="blogPostp p">You may be interested in our technologies. We want to share more helpful information with you about our digital life and methods.</p>
               <div className="blog">
-                <div className="postContainer">
+                {Array.isArray(popularBlogs) && popularBlogs.slice(0, 2).map((elem) => (<div className="postContainer">
                   <div className="postImg">
-                    <img src="src/assets/Rectangle 27.png" alt="" />
+                    <img src={elem.imageSrc} alt="" />
                   </div>
                   <div className="postText">
                     <div className="category">
-                      <div className="categoryLabel">Digital</div>
-                      <div className="date">April 06, 2020</div>
+                      <div className="categoryLabel">{elem.category}</div>
+                      <div className="date">{elem.Date}</div>
                     </div>
-                    <h3 className="postCardTitle">Where to Find Clients and How to Develop Cool.</h3>
-                    <div className="effect hover-text readMore">
-                      <a href=""></a>
-                    </div>
+                    <h3 className="postCardTitle">{elem.title}</h3>
+                    <Link to={`/blogs/${elem.id}`} className="effect hover-text readMore">
+                    </Link>
                   </div>
-                </div>
-                <div className="postContainer">
-                  <div className="postImg">
-                    <img src="src/assets/Rectangle 28.png" alt="" />
-                  </div>
-                  <div className="postText">
-                    <div className="category">
-                      <div className="categoryLabel">Web</div>
-                      <div className="date">April 06, 2020</div>
-                    </div>
-                    <h3 className="postCardTitle">If You Want to Learn More About Design, Look at This.</h3>
-                    <div className="effect hover-text readMore">
-                      <a href=""></a>
-                    </div>
-                  </div>
-                </div>
+                </div>))}
               </div>
             </div>
             <div className="recentPostImg">
-              <div className="recenttt">
+              {Array.isArray(popularBlogs) && popularBlogs.slice(2,3).map((elem) => (<div className="recenttt">
                 <div className="category category2">
-                  <div className="categoryLabel">Web</div>
-                  <div className="date">April 06, 2020</div>
+                  <div className="categoryLabel">{elem.category}</div>
+                  <div className="date">{elem.Date}</div>
                 </div>
-                <h3 className="postCardTitle">If You Want to Learn More About Design, Look at This.</h3>
-                <div className="effect hover-text readMore featureBtn">
-                  <a href=""></a>
-                </div>
-              </div>
+                <h3 className="postCardTitle">{elem.title}</h3>
+                <Link to={`/blogs/${elem.id}`} className="effect hover-text readMore featureBtn">
+                </Link>
+              </div>))}
             </div>
           </div>
         </section>
@@ -311,7 +324,7 @@ const Home = () => {
                 <p className="p">
                   We are grateful to know that you are interested in our content and services. Subscribe..!
                 </p>
-               
+
 
 
                 <Contactemail />

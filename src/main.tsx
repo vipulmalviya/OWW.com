@@ -7,6 +7,8 @@ import Home from './pages/Home.tsx';
 import Case from './pages/Case.tsx';
 import Contact from './pages/Contact.tsx';
 import CaseWork from './pages/CaseWork.tsx';
+import Blog from './pages/Blog.tsx';
+import Post from './pages/Post.tsx';
 
 
 const router = createBrowserRouter(
@@ -16,6 +18,13 @@ const router = createBrowserRouter(
       <Route path="Case" element={<Case />} />
       <Route path="CaseWork/:category/:id" element={<CaseWork />} />
       <Route path="Contact" element={<Contact />} />
+      <Route path="Blog" element={<Blog />} />
+      <Route
+        path="/blogs/:id"
+        element={<Post />}
+        loader={({ params }) => fetch(`http://localhost:5000/blogs/${params.id}`)}
+      />
+
     </Route>
   )
 )

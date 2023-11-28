@@ -73,24 +73,31 @@ const Header = () => {
         <div className="flex sidebarcol">
           <div className="sidebar">
             <ul className="text-container">
-              <li onClick={menuitem}>
+              <li >
                 <Link
+                onClick={menuitem}
                   to="/About"
                   className="effect hover-text about a"
                   id="page1"
                 ></Link>
               </li>
-              <li onClick={menuitem}>
+              <li >
                 <Link
+                onClick={menuitem}
                   to="#serv"
                   className="effect hover-text serviceBtn2 a"
                 ></Link>
               </li>
-              <li onClick={menuitem}>
-                <Link to="/Case" className="effect hover-text case a"></Link>
+              <li>
+                <Link 
+                 onClick={menuitem}
+                to="/Case" className="effect hover-text case a">
+
+                </Link>
               </li>
-              <li onClick={menuitem}>
+              <li>
                 <Link
+                  onClick={menuitem}
                   to="/Contact"
                   className="effect hover-text contact a"
                   id="page2"
@@ -101,7 +108,8 @@ const Header = () => {
               <GetQuotebtn text="Get A Quote" />
             </div>
             <button className="closebtn" onClick={closebtn}>
-              close
+            <span className="lines2"></span>
+              <span className="lines2"></span>
             </button>
           </div>
         </div>

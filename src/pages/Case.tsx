@@ -213,10 +213,6 @@ const Case = () => {
   const handleTabClick = (tab: string) => {
     setActiveTab(tab);
   };
-
-
-
-
   return (
     <div>
       <div className="section">
