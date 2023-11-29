@@ -5,7 +5,7 @@ import { VscArrowCircleRight } from "react-icons/vsc";
 // import { FcShare } from "react-icons/fc";
 import Contactemail from "../components/Contactemail";
 import { FacebookShareButton, TwitterShareButton , FacebookIcon, TwitterIcon ,LinkedinShareButton ,LinkedinIcon,WhatsappShareButton,WhatsappIcon} from "react-share";
-
+import { MdDateRange } from "react-icons/md";
 
 interface Blog {
     id: number;
@@ -76,14 +76,7 @@ const Post: React.FC = () => {
     ]
 
     const [isopen, setOpen] = useState(false)
-
-
-    // for share
-
     const currentPageUrl = window.location.href;
-
-
-
 
     return (
         <Fragment>
@@ -200,7 +193,7 @@ const Post: React.FC = () => {
                             {Array.isArray(popularBlogs) && popularBlogs.slice(0, 2).map((elem) => (
                                 <Link to={`/blogs/${elem.id}`} className="card" key={elem.id}>
                                     <img src={elem.imageSrc} alt="" />
-                                    <div className="date">{elem.Date}</div>
+                                    <div className="date"><MdDateRange  style={{fontSize:"1.2  rem"}}/>{elem.Date}</div>
                                     <h3 className="postCardTitle">{elem.title}</h3>
                                 </Link>
                             ))}

@@ -1,4 +1,5 @@
 import React from 'react';
+import { MdDateRange } from 'react-icons/md';
 import { Link } from 'react-router-dom';
 
 interface Blog {
@@ -36,7 +37,7 @@ const BlogCard: React.FC<BlogCardProps> = ({ blogs, currentPage, selectedCategor
             <div className="blog-chips-dsec">
               <div className="category category2">
                 <div className="blogCatagoryLable">{elem.category}</div>
-                <div className="date">{elem.Date}</div>
+                <div className="date"><MdDateRange />{elem.Date}</div>
               </div>
               <h3 className="postCardTitle">{elem.title}</h3>
             </div>

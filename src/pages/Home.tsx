@@ -4,7 +4,8 @@ import { useState, useRef, useEffect, Fragment } from "react";
 import Contactform from "../components/Contactform";
 import Contactemail from "../components/Contactemail";
 import { Link } from "react-router-dom";
-
+import { MdDateRange } from "react-icons/md";
+  
 
 interface Blog {
   id: number;
@@ -284,7 +285,7 @@ const Home: React.FC = () => {
                   <div className="postText">
                     <div className="category">
                       <div className="categoryLabel">{elem.category}</div>
-                      <div className="date">{elem.Date}</div>
+                      <div className="date"><MdDateRange />{elem.Date}</div>
                     </div>
                     <h3 className="postCardTitle">{elem.title}</h3>
                     <Link to={`/blogs/${elem.id}`} className="effect hover-text readMore">
@@ -297,7 +298,7 @@ const Home: React.FC = () => {
               {Array.isArray(popularBlogs) && popularBlogs.slice(2,3).map((elem) => (<div className="recenttt">
                 <div className="category category2">
                   <div className="categoryLabel">{elem.category}</div>
-                  <div className="date">{elem.Date}</div>
+                  <div className="date"><MdDateRange />{elem.Date}</div>
                 </div>
                 <h3 className="postCardTitle">{elem.title}</h3>
                 <Link to={`/blogs/${elem.id}`} className="effect hover-text readMore featureBtn">

@@ -1484,6 +1484,9 @@ button {
 .date {
   width: 60%;
   text-transform: capitalize;
+  align-items: center;
+  display: flex;
+  gap: .2rem;
 }
 
 .recentPostImg {
