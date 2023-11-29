@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 
 interface GetQuoteBtnProps {
   text: string;
@@ -6,12 +6,12 @@ interface GetQuoteBtnProps {
 
 const GetQuoteBtn: React.FC<GetQuoteBtnProps> = (props) => {
   return (
-    <div>
+    <Fragment>
       <div className="btn">
         <span className="btnVisible">{props.text}<i className="bx bx-chevron-right"></i></span>
         <span className="btnInVisible">{props.text}<i className="bx bx-chevron-right"></i></span>
       </div>
-    </div>
+    </Fragment>
   );
 }
 

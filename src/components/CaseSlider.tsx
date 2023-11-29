@@ -2,7 +2,7 @@ import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
 import '../style.css'
-import  { useEffect } from "react";
+import  { Fragment, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 const CaseSlider = () => {
@@ -72,7 +72,7 @@ const CaseSlider = () => {
 
 
   return (
-    <>
+    <Fragment>
      <div className="flex col caseSection">
               <div className="flex topcase">
                 <div className="caseItems">
@@ -127,7 +127,7 @@ const CaseSlider = () => {
                 </OwlCarousel>
               </div>
             </div> 
-    </>
+    </Fragment>
   )
 }
 

@@ -1,12 +1,11 @@
 import { Link } from "react-router-dom"
 import GetQuoteBtn from "../components/GetQuotebtn"
-import { SetStateAction, useEffect, useState } from "react"
+import { Fragment, SetStateAction, useEffect, useState } from "react"
 import BlogCard from "../components/blogCard"
 import CategorSelection from "../components/CategorSelection"
 
 const Blog = () => {
 
-  // Define the 'Blog' type
   interface Blog {
     id: number;
     imageSrc: string;
@@ -20,12 +19,11 @@ const Blog = () => {
     tags: string[];
   }
 
-  // Use 'Blog' as the type for the state
   const [blogs, setBlogs] = useState<Blog[]>([]);
   const [currentPage, setCurrentPage] = useState(1);
   const pageSize = 5
-  const [selectedCategory, setSelectedCategory] = useState(null);
-  const [activeCategory, setActiveCategory] = useState(null);
+  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+  const [activeCategory, setActiveCategory] = useState<string | null>(null);
 
 
 
@@ -57,7 +55,7 @@ const Blog = () => {
 
 
 
-  const handleCategoryChange = (category: SetStateAction<null>) => {
+  const handleCategoryChange = (category: SetStateAction<string | null>) => {
     setSelectedCategory(category);
     setCurrentPage(1);
     setActiveCategory(category)
@@ -67,7 +65,7 @@ const Blog = () => {
 
 
   return (
-    <div>
+    <Fragment>
       <div className="section">
         <div className="container flex aling-left">
           <Link to="/" className="lable2  flex">
@@ -91,12 +89,14 @@ const Blog = () => {
       </div>
       <div className="section">
         <div className="container centerl-f ">
-          <CategorSelection onSelectCategory={handleCategoryChange} selectedCategory={selectedCategory} activeCategory={activeCategory} />
+          <div className="blogBtn">
+            <CategorSelection onSelectCategory={handleCategoryChange} selectedCategory={selectedCategory} activeCategory={activeCategory} />
+          </div>
           <BlogCard blogs={blogs} currentPage={currentPage} selectedCategory={selectedCategory} pageSize={pageSize} />
           <GetQuoteBtn text={"Load More"} />
         </div>
       </div>
-    </div>
+    </Fragment>
   )
 }
 

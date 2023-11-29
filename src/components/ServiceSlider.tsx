@@ -3,6 +3,8 @@ import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
 import '../style.css'
+import { Fragment } from "react";
+
 const caseSlider = () => {
 
 
@@ -43,7 +45,7 @@ const caseSlider = () => {
   
 
   return (
-    <>
+    <Fragment>
     <div className="flex col serviceGrid">
               <div className="flex topcase">
                 <div className="serviceGridBox">
@@ -100,7 +102,7 @@ const caseSlider = () => {
                 </OwlCarousel>
               </div>
             </div>
-    </>
+    </Fragment>
   )
 }
 

@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { Fragment, useState } from "react";
 import "../style.css";
+
 const Footer = () => {
 
   const [isDay, setIsDay] = useState(true);
@@ -22,7 +23,7 @@ const Footer = () => {
   };
 
   return (
-    <>
+    <Fragment>
     <hr />
       <footer className="section">
         <div className="footercontainer flex footerflex">
@@ -89,7 +90,7 @@ const Footer = () => {
           </div>
         </div>
       </footer>
-    </>
+    </Fragment>
   )
 }
 

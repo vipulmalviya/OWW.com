@@ -1,4 +1,4 @@
-import { useRef } from 'react';
+import { Fragment, useRef } from 'react';
 import emailjs from '@emailjs/browser';
 
 export const Contactemail = () => {
@@ -22,7 +22,7 @@ export const Contactemail = () => {
     };
 
     return (
-        <div>
+        <Fragment>
             <form className="newsLatterform" ref={myFormRef} onSubmit={sendEmail}>
                 <div className="flex inputs">
                     <input type="email" placeholder="Email" name="from_email" required className="email" />
@@ -33,7 +33,7 @@ export const Contactemail = () => {
                     </div>
                 </button>
             </form>
-        </div>
+        </Fragment>
     );
 };
 

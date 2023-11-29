@@ -1811,11 +1811,10 @@ a {
   scale: 1;
 }
 
-/* case works page styleinga */
+/* case w page styleinga */
 
 .link {
   width: 100%;
-
 }
 
 .lable2 {
@@ -1944,129 +1943,46 @@ a {
   width: fit-content;
 }
 
+
 .protfolioS {
   background-color: var(--backGround-color);
   padding: 5rem 1rem !important;
 }
 
-a:active {
-  color: #9747ff !important;
-}
 
-.All {
-  width: 70px;
-  position: relative;
-  margin: 1rem;
-}
-
-.All>.underline::after {
-  content: "";
-  height: 1px;
-  width: 80%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  position: absolute;
-  background-color: var(--accesnt-color) !important;
-  bottom: 0;
-}
-
-
-/* aboutUs page styling*/
-.abtns {
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-}
-
-.effect.hover-text.All::after,
-.effect.hover-text.All::before {
-  /* color: var(--text-color); */
-  content: "All";
-  left: 0;
-}
-
-.effect.hover-text.UI_UX_Design::after,
-.effect.hover-text.UI_UX_Design::before {
-  /* color: var(--text-color); */
-  content: "UI UX Design";
-  left: 0;
-}
-
-.effect.hover-text.E-commerce::after,
-.effect.hover-text.E-commerce::before {
-  /* color: var(--text-color); */
-  content: "E-commerce";
-  left: 0;
-}
-
-.effect.hover-text.Security::after,
-.effect.hover-text.Security::before {
-  /* color: var(--text-color); */
-  content: "Security";
-  left: 0;
-}
-
-.UI_UX_Design,
-.E-commerce,
-.Security {
-  border-bottom: 1px solid var(--accesnt-color);
-  margin: 1rem;
-  position: relative;
-}
-
+/* Casework page styling*/
 .protfolio {
-  width: 100%;
-  background: var(--backGround-color);
-  height: 1250px;
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.allcards,
-.securitycards,
-.Ecommerce,
-.ui_ux {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-}
-
-#cardContainer {
   display: grid;
   grid-template-columns: auto auto auto;
-  grid-template-rows: auto auto;
   gap: 1rem;
-  flex-wrap: wrap;
-  padding: 1rem;
+  margin-bottom: 3rem ;
+}
+
+
+.Case_card {
   background-color: var(--backGround-color);
-}
-
-.center_card {
   position: relative;
+  width: auto;
+  height: auto;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: flex-end;
+  align-items: baseline;
+  min-width: 350px;
+  max-width: 450px;
+  position: relative;
+  border-radius: 15px;
+  cursor: pointer;
+  box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
   overflow: hidden;
-  transition: transform cubic-bezier(0.075, 0.82, 0.165, 1)2s;
+  transition: transform cubic-bezier(0.075, 0.82, 0.165, 1)2s; 
 }
-
-.foruntside {
-  position: absolute;
-  background-color: var(--text-color);
-  backface-visibility: hidden;
+.Case_card img {
+  object-fit: fill;
+  height:100%;
   width: 100%;
-  height: 100%;
-  /* transform: rotateY(0deg); */
-  overflow: hidden;
-}
-
-.foruntside img {
-  object-fit: cover;
-  width: 100%;
-}
-
-.aBtn {
-  width: fit-content;
-  margin: 2rem 0;
 }
 
 .center {
@@ -2100,7 +2016,7 @@ a:active {
 }
 
 
-.center_card:hover .cardinfo {
+.Case_card:hover .cardinfo {
   bottom: 0;
 }
 
@@ -2155,10 +2071,13 @@ a:active {
   padding: 0.5rem;
 }
 
-
+.blogBtn{
+  width: 100%;
+}
 .categorybtn {
   margin: 1rem;
   color: var(--text-color);
+  border-bottom: 1px solid var(--accesnt-color);
 }
 
 /* single blog page styling */
@@ -2193,7 +2112,7 @@ a:active {
 }
 
 .blogContent>h4 {
-  font-size: var(--sp-font-size);
+  font-size: var(--h3-font-size);
   line-height: 1.3rem;
   font-weight: 500;
   margin: 1rem 0;
@@ -2225,11 +2144,8 @@ a:active {
 }
 
 .quteContent {
+  font-size: var(--h3-font-size);
   margin: 0rem 0 1rem 0;
-}
-
-.shareIcone {
-  font-size: 2rem;
 }
 
 .scBtns {
@@ -2288,7 +2204,7 @@ a:active {
 
 .authordetail h4,
 .quteCard h4 {
-  font-size: var(--sp-font-size);
+  font-size: var(--h3-font-size);
   line-height: 1.3rem;
   font-weight: 500;
   margin: 1.5px 0;
@@ -2314,7 +2230,7 @@ a:active {
 .search>input {
   background-color: none;
   padding: 1rem;
-  font-size: var(--sp-font-size);
+  font-size: var(--h3-font-size);
   background-color: transparent;
   border: none;
   width: 100%;
@@ -2349,10 +2265,10 @@ a:active {
 .card>img {
   background-color: var(--backGround-color);
   width: 100%;
-  height: 300px;
+  height: auto;
   border-radius: 10px;
   margin: 1rem 0;
-  object-fit: cover;
+  object-fit: fill;
 }
 
 .newsletter {
@@ -2761,10 +2677,9 @@ a:active {
     margin: 1rem;
   }
 
-
-  .protfolio {
-    min-height: 1150px;
-  }
+.protfolio {
+  grid-template-columns: auto auto;
+}
 
 }
 
@@ -2900,10 +2815,6 @@ a:active {
     gap: 1rem;
   }
 
-  .protfolio {
-    min-height: 1500px;
-  }
-
   .authorCard {
     align-items: center;
     padding: 2rem 1rem;
@@ -2924,6 +2835,9 @@ a:active {
 
   .quteCard>img {
     right: 20px;
+  }
+  .scBtns{
+    justify-content:center;
   }
 }
 
@@ -3242,6 +3156,12 @@ a:active {
   .authordetail {
     padding: .5rem;
   }
+
+  .protfolio {
+    grid-template-columns:auto;
+  }
+
+ 
 
 }
 

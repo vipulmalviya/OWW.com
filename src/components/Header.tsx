@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { Fragment, useState } from "react";
 import "../style.css";
 import { Link, NavLink } from "react-router-dom";
 import GetQuotebtn from "./GetQuotebtn";
@@ -68,7 +68,7 @@ const Header = () => {
   
 
   return (
-    <>
+    <Fragment>
       <header id="header">
         <div className="flex sidebarcol">
           <div className="sidebar">
@@ -235,7 +235,7 @@ const Header = () => {
           </div>
         </div>
       </header>
-    </>
+    </Fragment>
   );
 };
 

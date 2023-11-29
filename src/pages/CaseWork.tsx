@@ -1,29 +1,28 @@
-import { useParams, Link } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
 import CaseSlider from '../components/CaseSlider';
 import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
 import '../style.css'
-import data from './data.json'
+import { Fragment } from 'react';
 
-const CaseWork = () => {
-    const { category, id } = useParams();
-
-    if (!category) {
-        return <div>Category not found</div>;
-    }
-
-    if ((!data.Categories as any)[category]) {
-        return <div>Category not found</div>;
-    }
-
-    const project = (data.Categories as any)[category]?.find((project: { id: string }) => project.id === id);
+interface Case {
+    id: number;
+    clientName: string;
+    category: string;
+    startDate: string;
+    finishDate: string;
+    title: string;
+    images: string[];
+    imageSrc: string;
+}
 
 
+const CaseWork: React.FC = () => {
+    const data = useLoaderData();
+    const [firestCase] = data as Case[];
+    const { clientName, category, startDate, finishDate, title , images } = firestCase;
 
-    if (!project) {
-        return <div>Card not found</div>;
-    }
 
     // slider btn
     const handlePrevClick = () => {
@@ -34,9 +33,8 @@ const CaseWork = () => {
         $(".owl-carousel").trigger("next.owl.carousel");
     };
 
-
     return (
-        <div>
+        <Fragment>
             <div className="section">
                 <div className="container flex aling-left">
                     <Link to="/" className="lable2  flex">
@@ -59,7 +57,7 @@ const CaseWork = () => {
                         <span className="flexcenter textspan"><span className="line" /></span>
                         Cases Work
                     </h4>
-                    <h2 className="sectionTitle">website Design and Development for {project.title} </h2>
+                    <h2 className="sectionTitle">website Design and Development for {title} </h2>
                 </div>
             </div>
             <div className="section">
@@ -69,15 +67,12 @@ const CaseWork = () => {
                             items={1}
                             margin={1}
                         >
-                            <div className="item">
-                                <img src={project.images[0]} alt='' />
-                            </div>
-                            <div className="item">
-                                <img src={project.images[1]} alt='' />
-                            </div>
-                            <div className="item">
-                                <img src={project.images[2]} alt='' />
-                            </div>
+                            {images.map((img, index) => (
+                                <div className="item" key={index}>
+                                    <img src={img} alt={`Image ${index + 1}`} />
+                                </div>
+                            ))}
+
                         </OwlCarousel>
                     </div>
                     <div className="carousalBtn casebtns">
@@ -100,10 +95,10 @@ const CaseWork = () => {
                     </div>
                     <div className="dvaider" />
                     <div className="projectdetails grid">
-                        <h4 className="ahadding">client : <span> {project.clientName}</span></h4>
-                        <h4 className="ahadding">Start Date : <span>{project.startDate}</span></h4>
-                        <h4 className="ahadding">Category : <span>{project.category}</span></h4>
-                        <h4 className="ahadding">Finish Date : <span> {project.finishDate}</span></h4>
+                        <h4 className="ahadding">client : <span> {clientName}</span></h4>
+                        <h4 className="ahadding">Start Date : <span>{startDate}</span></h4>
+                        <h4 className="ahadding">Category : <span>{category}</span></h4>
+                        <h4 className="ahadding">Finish Date : <span> {finishDate}</span></h4>
                     </div>
                     <div className="dvaider" />
                     <div className="btn cBtn">
@@ -118,7 +113,7 @@ const CaseWork = () => {
                     <CaseSlider />
                 </div>
             </div>
-        </div>
+        </Fragment>
 
     )
 }

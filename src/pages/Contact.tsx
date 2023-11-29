@@ -1,8 +1,10 @@
+import { Fragment } from "react"
 import Contactemail from "../components/Contactemail"
 import Contactform from "../components/Contactform"
+
 const Contact = () => {
   return (
-    <div>
+    <Fragment>
       <div>
         <section className="section">
           <div className="container contactContainer">
@@ -94,7 +96,7 @@ const Contact = () => {
         <hr />
       </div>
 
-    </div>
+    </Fragment>
   )
 }
 

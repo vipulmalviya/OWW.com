@@ -1,6 +1,6 @@
 import ServiceSlider from "../components/ServiceSlider";
 import CaseSlider from "../components/CaseSlider";
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, Fragment } from "react";
 import Contactform from "../components/Contactform";
 import Contactemail from "../components/Contactemail";
 import { Link } from "react-router-dom";
@@ -57,7 +57,6 @@ const Home: React.FC = () => {
 
   const toggleVideo = () => {
     const video = videoRef.current as HTMLVideoElement | null;
-
     if (video) {
       if (isPlaying) {
         video.muted = true;
@@ -90,7 +89,7 @@ const Home: React.FC = () => {
   }, []);
 
   return (
-    <div>
+    <Fragment>
       <main id="main">
         {/* <!-- heroSection --> */}
         <section className="section">
@@ -351,7 +350,7 @@ const Home: React.FC = () => {
         <hr />
 
       </ main>
-    </div>
+    </Fragment>
   )
 }
 

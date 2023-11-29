@@ -1,12 +1,10 @@
 import React, { Fragment } from 'react'
-
-interface CategorSelectionProps {
+interface CaseCategoryProps {
     onSelectCategory: (category: string | null) => void;
     activeCategory: string | null;
   }
-  
-  const CategorSelection: React.FC<CategorSelectionProps> = ({ onSelectCategory, activeCategory }) => {
-    const categories =["Devlopment","Designing","Trends","Businesses","Security"]
+const CaseCategory: React.FC<CaseCategoryProps> = ({ onSelectCategory, activeCategory }) => {
+    const categories =["UI_UX_Design","E-Commerce","Security"]
   return (
     <Fragment>
       <button onClick={()=>onSelectCategory(null)} className={`categorybtn ${activeCategory  ? "" : "higlight"}`}>All</button>
@@ -23,4 +21,4 @@ interface CategorSelectionProps {
   )
 }
 
-export default CategorSelection
+export default CaseCategory

@@ -1,4 +1,4 @@
-import { useRef } from 'react';
+import { Fragment, useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import GetQuotebtn from './GetQuotebtn';
 
@@ -26,7 +26,7 @@ export const Contactform = () => {
     };
 
     return (
-        <div>
+        <Fragment>
             <form className="form" ref={myFormRef} onSubmit={sendEmail}>
                 <div className="flex inputs">
                     <input type="text" placeholder="Name" name="from_name"  required className="name" />
@@ -37,7 +37,7 @@ export const Contactform = () => {
                     <GetQuotebtn text="Get A Quote" />
                 </button>
             </form>
-        </div>
+        </Fragment>
     );
 };
 

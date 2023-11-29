@@ -1,9 +1,11 @@
-import { useEffect, useState } from "react"
+import { Fragment, useEffect, useState } from "react"
 import { Link, useLoaderData } from "react-router-dom"
 import { VscArrowCircleLeft } from "react-icons/vsc";
 import { VscArrowCircleRight } from "react-icons/vsc";
-import { FcShare } from "react-icons/fc";
+// import { FcShare } from "react-icons/fc";
 import Contactemail from "../components/Contactemail";
+import { FacebookShareButton, TwitterShareButton , FacebookIcon, TwitterIcon ,LinkedinShareButton ,LinkedinIcon,WhatsappShareButton,WhatsappIcon} from "react-share";
+
 
 interface Blog {
     id: number;
@@ -25,8 +27,6 @@ const Post: React.FC = () => {
 
     const [firstBlog] = data as Blog[];
     const { imageSrc, author, authorPic, content, title, tags } = firstBlog;
-    console.log(firstBlog);
-
 
     const [popularBlogs, setPopularBlogs] = useState<Blog[]>([]);
 
@@ -78,8 +78,15 @@ const Post: React.FC = () => {
     const [isopen, setOpen] = useState(false)
 
 
+    // for share
+
+    const currentPageUrl = window.location.href;
+
+
+
+
     return (
-        <div>
+        <Fragment>
             <div className="section">
                 <div className="blogContainer flex aling-left">
                     <Link to="/" className="lable2  flex">
@@ -138,8 +145,21 @@ const Post: React.FC = () => {
                             </div>
                         ))}
 
-                        <div className="scBtns flex">
-                            <div className="flex" style={{ alignItems: "center", cursor: "pointer" }}><FcShare className="shareIcone" />Share</div>
+                        <div className="scBtns flex" style={{flexWrap:"wrap"}}>
+                            <div className="flex" style={{ alignItems: "center", cursor: "pointer",gap:".5rem" }}>
+                            <FacebookShareButton url={currentPageUrl} style={{margin:"0"}}>
+                            <FacebookIcon style={{width:"30",margin:"0"}}/>
+                            </FacebookShareButton>
+                            <TwitterShareButton url={currentPageUrl} style={{margin:"0"}}>
+                            <TwitterIcon style={{width:"30"}}/>
+                            </TwitterShareButton>
+                            <LinkedinShareButton url={currentPageUrl} style={{margin:"0"}}>
+                            <LinkedinIcon style={{width:"30"}}/>
+                            </LinkedinShareButton>
+                            <WhatsappShareButton url={currentPageUrl} style={{margin:"0"}}>
+                            <WhatsappIcon style={{width:"30"}}/>
+                            </WhatsappShareButton>
+                            </div>
                             <div className="catagoryBtn">
                                 <button>Trends</button>
                                 <button>Businesses</button>
@@ -178,11 +198,11 @@ const Post: React.FC = () => {
                         <h1>Recent Posts</h1>
                         <div className="RecentPostCard">
                             {Array.isArray(popularBlogs) && popularBlogs.slice(0, 2).map((elem) => (
-                                <div className="card" key={elem.id}>
+                                <Link to={`/blogs/${elem.id}`} className="card" key={elem.id}>
                                     <img src={elem.imageSrc} alt="" />
                                     <div className="date">{elem.Date}</div>
                                     <h3 className="postCardTitle">{elem.title}</h3>
-                                </div>
+                                </Link>
                             ))}
                         </div>
                         <div className="newsletter">
@@ -201,7 +221,7 @@ const Post: React.FC = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </Fragment>
     )
 }
 

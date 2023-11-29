@@ -16,7 +16,11 @@ const router = createBrowserRouter(
     <Route path="/" element={<App />} >
       <Route path="" element={<Home />} />
       <Route path="Case" element={<Case />} />
-      <Route path="CaseWork/:category/:id" element={<CaseWork />} />
+      <Route
+       path="/CaseWork/:id"
+        element={<CaseWork />} 
+       loader={({ params }) => fetch(`http://localhost:5000/Case/${params.id}`)}
+      />
       <Route path="Contact" element={<Contact />} />
       <Route path="Blog" element={<Blog />} />
       <Route
@@ -24,7 +28,6 @@ const router = createBrowserRouter(
         element={<Post />}
         loader={({ params }) => fetch(`http://localhost:5000/blogs/${params.id}`)}
       />
-
     </Route>
   )
 )
