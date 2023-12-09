@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 import GetQuoteBtn from "../components/GetQuotebtn"
-import { Fragment, SetStateAction, useEffect, useState } from "react"
+import { Fragment, useEffect, useState } from "react"
 import BlogCard from "../components/blogCard"
 import CategorSelection from "../components/CategorSelection"
 
@@ -55,7 +55,7 @@ const Blog = () => {
 
 
 
-  const handleCategoryChange = (category: SetStateAction<string | null>) => {
+  const handleCategoryChange = (category: string | null) => {
     setSelectedCategory(category);
     setCurrentPage(1);
     setActiveCategory(category)
@@ -90,7 +90,7 @@ const Blog = () => {
       <div className="section">
         <div className="container centerl-f ">
           <div className="blogBtn">
-            <CategorSelection onSelectCategory={handleCategoryChange} selectedCategory={selectedCategory} activeCategory={activeCategory} />
+            <CategorSelection onSelectCategory={handleCategoryChange}  activeCategory={activeCategory} />
           </div>
           <BlogCard blogs={blogs} currentPage={currentPage} selectedCategory={selectedCategory} pageSize={pageSize} />
           <GetQuoteBtn text={"Load More"} />

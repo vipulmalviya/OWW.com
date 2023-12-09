@@ -5,7 +5,7 @@ import Contactform from "../components/Contactform";
 import Contactemail from "../components/Contactemail";
 import { Link } from "react-router-dom";
 import { MdDateRange } from "react-icons/md";
-  
+
 
 interface Blog {
   id: number;
@@ -233,24 +233,31 @@ const Home: React.FC = () => {
                 </p>
                 <div className="chooseTick">
                   <i className="bx bxs-check-circle" style={{ color: '#9747ff' }}></i>
-                  <h3>Innovative Solutions</h3>
+                  <h3>Craftsmanship Meets Innovation</h3>
                 </div>
                 <p className="p">
-                  Crafting unique digital experiences that resonate with your audience.
+                  We merge old-world values with digital innovation for timeless results.
                 </p>
                 <div className="chooseTick">
                   <i className="bx bxs-check-circle" style={{ color: '#9747ff' }}></i>
-                  <h3>Advanced Protections</h3>
+                  <h3>Your Vision, Our Mission</h3>
                 </div>
                 <p className="p">
-                  Utilizing cutting-edge technology to safeguard your digital assets.
+                  Your dreams guide our every move, ensuring a website that truly reflects your brand.
                 </p>
                 <div className="chooseTick">
                   <i className="bx bxs-check-circle" style={{ color: '#9747ff' }}></i>
-                  <h3>User-Centric Approach</h3>
+                  <h3>Security Beyond Par</h3>
                 </div>
                 <p className="p">
-                  Prioritizing user engagement and seamless navigation.
+                  Robust security measures to safeguard your digital assets in an ever-evolving online landscape.
+                </p>
+                <div className="chooseTick">
+                  <i className="bx bxs-check-circle" style={{ color: '#9747ff' }}></i>
+                  <h3>Results That Matter</h3>
+                </div>
+                <p className="p">
+                  We don't just build; we deliver results that impact your bottom line.
                 </p>
               </div>
             </div>
@@ -295,7 +302,7 @@ const Home: React.FC = () => {
               </div>
             </div>
             <div className="recentPostImg">
-              {Array.isArray(popularBlogs) && popularBlogs.slice(2,3).map((elem) => (<div className="recenttt">
+              {Array.isArray(popularBlogs) && popularBlogs.slice(2, 3).map((elem) => (<div className="recenttt">
                 <div className="category category2">
                   <div className="categoryLabel">{elem.category}</div>
                   <div className="date"><MdDateRange />{elem.Date}</div>

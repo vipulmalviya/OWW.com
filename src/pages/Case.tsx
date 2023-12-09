@@ -1,27 +1,22 @@
-
 import { Link } from 'react-router-dom'
 import '../style.css'
-import { Fragment, SetStateAction, useEffect, useState } from 'react';
+import { Fragment, useEffect, useState } from 'react';
 import GetQuotebtn from '../components/GetQuotebtn';
 import CaseCard from '../components/CaseCard';
 import CaseCategory from '../components/CaseCategory';
 
-
-interface Case {
-  id: number;
-  clientName: string;
-  category: string;
-  startDate: string;
-  finishDate: string;
-  title: string;
-  images: string[];
-}
-
-
 const Case = () => {
+  // interface Case {
+  //   id: number;
+  //   clientName: string;
+  //   category: string;
+  //   startDate: string;
+  //   finishDate: string;
+  //   title: string;
+  //   images: string[];
+  // }
 
-
-  const [cards, setCards] = useState<Case[]>([]);
+  const [cards, setCards] = useState<[]>([]);
   const [currentPage, setCurrentPage] = useState(1);
   const pageSize = 5
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
@@ -56,7 +51,7 @@ const Case = () => {
 
 
 
-  const handleCategoryChange = (category: SetStateAction<string | null>) => {
+  const handleCategoryChange =(category: string | null) => {
     setSelectedCategory(category);
     setCurrentPage(1);
     setActiveCategory(category);
@@ -90,7 +85,7 @@ const Case = () => {
       <div className="section">
         <div className="container">
           <div className="abtns">
-            <CaseCategory onSelectCategory={handleCategoryChange} selectedCategory={selectedCategory} activeCategory={activeCategory} />
+            <CaseCategory onSelectCategory={handleCategoryChange} activeCategory={activeCategory} />
           </div>
         </div>
       </div>

@@ -163,7 +163,7 @@ const Header = () => {
                   <img
                     id="day"
                     style={{
-                      transform: isDay ? "translateY(-150%)" : "translateY(40%)",
+                      transform: isDay ? "translateY(-150%)" : "translateY(55%)",
                     }}
                     alt="Day"
                     src="/src/assets/Frame 24.svg"
@@ -171,7 +171,7 @@ const Header = () => {
                   <img
                     id="night"
                     style={{
-                      transform: isDay ? "translateY(-40%)" : "translateY(150%)",
+                      transform: isDay ? "translateY(-55%)" : "translateY(150%)",
                     }}
                     alt="Night"
                     src="/src/assets/Frame 23.svg"

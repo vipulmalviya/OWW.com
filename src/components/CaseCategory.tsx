@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react'
 interface CaseCategoryProps {
-    onSelectCategory: (category: string | null) => void;
-    activeCategory: string | null;
+  onSelectCategory: (category: string | null) => void;
+  activeCategory: string | null;
   }
 const CaseCategory: React.FC<CaseCategoryProps> = ({ onSelectCategory, activeCategory }) => {
     const categories =["UI_UX_Design","E-Commerce","Security"]

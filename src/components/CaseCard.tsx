@@ -1,30 +1,26 @@
 import React, { Fragment } from 'react'
 import { Link } from 'react-router-dom';
 
-
-
 interface Case {
     description: string;
     id: number;
-    clientName: string;
     category: string;
-    startDate: string;
-    finishDate: string;
     title: string;
-    images: string[];
     imageSrc: string;
-}
-
-interface CaseCardProps {
+  }
+  
+  interface CaseCardProps {
     cards: Case[];
     currentPage: number;
     selectedCategory: string | null;
     pageSize: number;
-}
+  }
+  
+  
 
-const CaseCard: React.FC<CaseCardProps> = ({ cards, currentPage, selectedCategory, pageSize}) => {
+const CaseCard: React.FC<CaseCardProps> = ({cards, currentPage, selectedCategory, pageSize}) => {
     const filteredCase = cards
-        .filter((cards: { category: string; }) => !selectedCategory || cards.category === selectedCategory)
+        .filter((cards) => !selectedCategory || cards.category === selectedCategory)
         .slice((currentPage - 1) * pageSize, currentPage * pageSize);
     console.log(filteredCase);
 
