@@ -1330,28 +1330,28 @@ button {
 }
 
 .caseSlide1 {
-  background: url("/public/assets/sb.png") no-repeat;
+  background: url("/assets/sb.png") no-repeat;
   background-position: top center;
   background-size: cover;
 
 }
 
 .caseSlide2 {
-  background: url("/public/assets/oww.png") no-repeat;
+  background: url("/assets/oww.png") no-repeat;
   background-position: top center;
   background-size: cover;
 
 }
 
 .caseSlide3 {
-  background: url("/public/assets/refine.png") no-repeat;
+  background: url("/assets/refine.png") no-repeat;
   background-position: top center;
   background-size: cover;
 
 }
 
 .caseSlide4 {
-  background: url("/public/assets/stepanie.png") no-repeat;
+  background: url("/assets/stepanie.png") no-repeat;
   background-position: top center;
   background-size: cover;
 
@@ -1395,11 +1395,11 @@ button {
 }
 
 .effect.hover-text.arrowIcon::after {
-  content: url(/public/assets/Frame\ 18.svg);
+  content: url(/assets/Frame\ 18.svg);
 }
 
 .effect.hover-text.arrowIcon::before {
-  content: url(/public/assets/Arrow\ 1.svg);
+  content: url(/assets/Arrow\ 1.svg);
 }
 
 /* 
@@ -1494,7 +1494,7 @@ button {
   width: 45%;
   height: 70vh;
   /* background-color: #fff; */
-  background-image: linear-gradient(transparent, black), url(/public/assets/Rectangle\ 26.png);
+  background-image: linear-gradient(transparent, black), url(/assets/Rectangle\ 26.png);
   background-position: center;
   background-size: cover;
   margin: 4rem 0;
@@ -1558,7 +1558,7 @@ button {
 }
 
 .contactImg {
-  background-image: url("/public/assets/Rectangle\ 32.png");
+  background-image: url("/assets/Rectangle 32.png");
   width: 500px;
   height: 500px;
   background-position: center;
