@@ -209,9 +209,9 @@ const Post: React.FC = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="sideBarBtn" onClick={() => setOpen(!isopen)}>
+                    {/* <div className="sideBarBtn" onClick={() => setOpen(!isopen)}>
                         <span>{isopen ? <VscArrowCircleRight /> : <VscArrowCircleLeft />}</span>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </Fragment>

@@ -23,6 +23,10 @@ interface Blog {
 
 const Home: React.FC = () => {
 
+
+
+
+
   useEffect(() => {
     const img1 = document.querySelector(".img1") as HTMLImageElement | null;
     const img2 = document.querySelector(".img2") as HTMLImageElement | null;
@@ -52,8 +56,16 @@ const Home: React.FC = () => {
     return () => bodyObserver.disconnect();
   }, []);
 
-
   const [isPlaying, setIsPlaying] = useState(false);
+
+  if(isPlaying){
+    document.body.style.overflow = "hidden";
+  }else{
+    document.body.style.overflow = "auto";
+  }
+
+
+
   const videoRef = useRef(null);
 
   const toggleVideo = () => {

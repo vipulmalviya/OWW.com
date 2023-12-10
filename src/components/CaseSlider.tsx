@@ -96,7 +96,6 @@ const CaseSlider = () => {
               <div className="caseSlider">
                 <OwlCarousel className="owl-carousel" 
                   items={3}
-                  margin={10}
                   responsiveClass={true}
                   responsive={{
                     0: {

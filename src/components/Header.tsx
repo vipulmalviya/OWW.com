@@ -6,13 +6,22 @@ import GetQuotebtn from "./GetQuotebtn";
 
 const Header = () => {
   // sectionbtn scripting
+  const [isOpen, setOpen] = useState(true);
 
   function sectonbtn() {
-    const serviceToggle = document.querySelector(".serviceToggle");
-    if (serviceToggle) {
-      serviceToggle.classList.toggle("open");
+    setOpen(() => !isOpen); 
+  
+    const serviceToggleElement = document.querySelector(".serviceToggle");
+  
+    if (serviceToggleElement !== null && isOpen) {
+      serviceToggleElement.classList.add("open");
+      document.body.style.overflow = "hidden";
+    } else {
+      serviceToggleElement?.classList.remove("open");
+      document.body.style.overflow = "auto";
     }
   }
+  
 
   // theme changing scripting
 
@@ -55,7 +64,7 @@ const Header = () => {
   function menuitem() {
     const menuItems = document.querySelectorAll(".a");
     const sidebar = document.querySelector(".sidebar");
-  
+
     menuItems.forEach((menuItem) => {
       menuItem.addEventListener("click", () => {
         if (sidebar) {
@@ -65,7 +74,7 @@ const Header = () => {
       });
     });
   }
-  
+
 
   return (
     <Fragment>
@@ -75,7 +84,7 @@ const Header = () => {
             <ul className="text-container">
               <li >
                 <Link
-                onClick={menuitem}
+                  onClick={menuitem}
                   to="/About"
                   className="effect hover-text about a"
                   id="page1"
@@ -83,15 +92,15 @@ const Header = () => {
               </li>
               <li >
                 <Link
-                onClick={menuitem}
+                  onClick={menuitem}
                   to="#serv"
                   className="effect hover-text serviceBtn2 a"
                 ></Link>
               </li>
               <li>
-                <Link 
-                 onClick={menuitem}
-                to="/Case" className="effect hover-text case a">
+                <Link
+                  onClick={menuitem}
+                  to="/Case" className="effect hover-text case a">
 
                 </Link>
               </li>
@@ -108,7 +117,7 @@ const Header = () => {
               <GetQuotebtn text="Get A Quote" />
             </div>
             <button className="closebtn" onClick={closebtn}>
-            <span className="lines2"></span>
+              <span className="lines2"></span>
               <span className="lines2"></span>
             </button>
           </div>
