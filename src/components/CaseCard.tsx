@@ -28,7 +28,7 @@ const CaseCard: React.FC<CaseCardProps> = ({cards, currentPage, selectedCategory
         <Fragment>
             {Array.isArray(filteredCase) ? (
                 filteredCase.map((elem) => (
-                    <Link to={`/CaseWork/${elem.id}`} className="Case_card" key={elem.id}>
+                    <Link to={`/CaseWork/${elem.id}/`} className="Case_card" key={elem.id}>
                         <img src={elem.imageSrc} alt="" />
                         <div className="cardinfo">
                             <h3 className="hedding">{elem.title}</h3>

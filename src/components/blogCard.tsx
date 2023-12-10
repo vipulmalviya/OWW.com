@@ -32,7 +32,7 @@ const BlogCard: React.FC<BlogCardProps> = ({ blogs, currentPage, selectedCategor
     <div className="blogs-wraper grid">
       {Array.isArray(filteredBlogs) ? (
         filteredBlogs.map((elem) => (
-          <Link to={`/blogs/${elem.id}`} className="blog-chips" key={elem.id}>
+          <Link to={`/blogs/${elem.id}/`} className="blog-chips" key={elem.id}>
             <img src={elem.imageSrc} alt="thumbnails img" />
             <div className="blog-chips-dsec">
               <div className="category category2">

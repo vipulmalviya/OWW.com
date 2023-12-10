@@ -295,7 +295,7 @@ const Home: React.FC = () => {
                       <div className="date"><MdDateRange />{elem.Date}</div>
                     </div>
                     <h3 className="postCardTitle">{elem.title}</h3>
-                    <Link to={`/blogs/${elem.id}`} className="effect hover-text readMore">
+                    <Link to={`/blogs/${elem.id}/`} className="effect hover-text readMore">
                     </Link>
                   </div>
                 </div>))}
@@ -308,7 +308,7 @@ const Home: React.FC = () => {
                   <div className="date"><MdDateRange />{elem.Date}</div>
                 </div>
                 <h3 className="postCardTitle">{elem.title}</h3>
-                <Link to={`/blogs/${elem.id}`} className="effect hover-text readMore featureBtn">
+                <Link to={`/blogs/${elem.id}/`} className="effect hover-text readMore featureBtn">
                 </Link>
               </div>))}
             </div>
