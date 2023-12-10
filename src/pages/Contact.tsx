@@ -22,7 +22,7 @@ const Contact = () => {
                 <div className="contactInfoBox">
                   <div className="address">
                     <div className="addresImg">
-                      <img src="public/assets/Vector.svg" />
+                      <img src="/assets/Vector.svg" />
                     </div>
                     <div className="addressText">
                       <span className="addHead">address</span> <br />
@@ -33,7 +33,7 @@ const Contact = () => {
                 <div className="contactInfoBox">
                   <div className="address">
                     <div className="addresImg">
-                      <img src="public/assets/cil_chat-bubble.svg" />
+                      <img src="/assets/cil_chat-bubble.svg" />
                     </div>
                     <div className="addressText">
                       <span className="addHead">address</span> <br />
@@ -44,7 +44,7 @@ const Contact = () => {
                 <div className="contactInfoBox">
                   <div className="address">
                     <div className="addresImg">
-                      <img src="public/assets/Vector.svg" />
+                      <img src="/assets/Vector.svg" />
                     </div>
                     <div className="addressText">
                       <span className="addHead">address</span> <br />
@@ -77,7 +77,7 @@ const Contact = () => {
               <div className="contactImg">
                 <div className="newsletterText">
                   <div className="intro flex">
-                    <img src="public/assets/Ellipse 14.png" />
+                    <img src="/assets/Ellipse 14.png" />
                     <div className="names">
                       <span>antonio rodriguez</span> <br />
                       <p>ceo, jio Digital life</p>
@@ -88,7 +88,7 @@ const Contact = () => {
                       intrested in our content and services <br />
                       Subscribe.!</p>
                   </div>
-                  <img src="public/assets/signature (3) 1.png" className="signatureImg" />
+                  <img src="/assets/signature (3) 1.png" className="signatureImg" />
                 </div>
               </div>
             </div>

@@ -4,7 +4,7 @@ import { VscArrowCircleLeft } from "react-icons/vsc";
 import { VscArrowCircleRight } from "react-icons/vsc";
 // import { FcShare } from "react-icons/fc";
 import Contactemail from "../components/Contactemail";
-import { FacebookShareButton, TwitterShareButton , FacebookIcon, TwitterIcon ,LinkedinShareButton ,LinkedinIcon,WhatsappShareButton,WhatsappIcon} from "react-share";
+import { FacebookShareButton, TwitterShareButton, FacebookIcon, TwitterIcon, LinkedinShareButton, LinkedinIcon, WhatsappShareButton, WhatsappIcon } from "react-share";
 import { MdDateRange } from "react-icons/md";
 
 interface Blog {
@@ -50,27 +50,27 @@ const Post: React.FC = () => {
     const cat = [
         {
             "id": 1,
-            "imgSrc": "/public/assets/image-square.svg",
+            "imgSrc": "/assets/image-square.svg",
             "catName": "Devlopment",
         },
         {
             "id": 2,
-            "imgSrc": "/public/assets/image-square.svg",
+            "imgSrc": "/assets/image-square.svg",
             "catName": "Designing",
         },
         {
             "id": 3,
-            "imgSrc": "/public/assets/image-square.svg",
+            "imgSrc": "/assets/image-square.svg",
             "catName": "Trends",
         },
         {
             "id": 4,
-            "imgSrc": "/public/assets/image-square.svg",
+            "imgSrc": "/assets/image-square.svg",
             "catName": "Businesses",
         },
         {
             "id": 5,
-            "imgSrc": "/public/assets/image-square.svg",
+            "imgSrc": "/assets/image-square.svg",
             "catName": "Security",
         }
     ]
@@ -120,7 +120,7 @@ const Post: React.FC = () => {
                             </div>
                         ))}
                         <div className="quteCard ">
-                            <img src="/public/assets/qutetion.svg" className="qutaionImg" alt="" />
+                            <img src="/assets/qutetion.svg" className="qutaionImg" alt="" />
                             <h4 className="quteContent">
                                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero architecto amet consequatur consectetur velit autem molestiae reprehenderit, accusamus minus ad repellendus optio a, eius incidunt rerum dolorem debitis sit porro. Lorem ipsum dolor sit amet, consectetur adipisicing elit. At illo corporis tempora dignissimos unde earum cum odit! Illo eligendi delectus a sed doloremque, quod quae exercitationem quidem recusandae ullam earum?
                             </h4>
@@ -138,20 +138,20 @@ const Post: React.FC = () => {
                             </div>
                         ))}
 
-                        <div className="scBtns flex" style={{flexWrap:"wrap"}}>
-                            <div className="flex" style={{ alignItems: "center", cursor: "pointer",gap:".5rem" }}>
-                            <FacebookShareButton url={currentPageUrl} style={{margin:"0"}}>
-                            <FacebookIcon style={{width:"30",margin:"0"}}/>
-                            </FacebookShareButton>
-                            <TwitterShareButton url={currentPageUrl} style={{margin:"0"}}>
-                            <TwitterIcon style={{width:"30"}}/>
-                            </TwitterShareButton>
-                            <LinkedinShareButton url={currentPageUrl} style={{margin:"0"}}>
-                            <LinkedinIcon style={{width:"30"}}/>
-                            </LinkedinShareButton>
-                            <WhatsappShareButton url={currentPageUrl} style={{margin:"0"}}>
-                            <WhatsappIcon style={{width:"30"}}/>
-                            </WhatsappShareButton>
+                        <div className="scBtns flex" style={{ flexWrap: "wrap" }}>
+                            <div className="flex" style={{ alignItems: "center", cursor: "pointer", gap: ".5rem" }}>
+                                <FacebookShareButton url={currentPageUrl} style={{ margin: "0" }}>
+                                    <FacebookIcon style={{ width: "30", margin: "0" }} />
+                                </FacebookShareButton>
+                                <TwitterShareButton url={currentPageUrl} style={{ margin: "0" }}>
+                                    <TwitterIcon style={{ width: "30" }} />
+                                </TwitterShareButton>
+                                <LinkedinShareButton url={currentPageUrl} style={{ margin: "0" }}>
+                                    <LinkedinIcon style={{ width: "30" }} />
+                                </LinkedinShareButton>
+                                <WhatsappShareButton url={currentPageUrl} style={{ margin: "0" }}>
+                                    <WhatsappIcon style={{ width: "30" }} />
+                                </WhatsappShareButton>
                             </div>
                             <div className="catagoryBtn">
                                 <button>Trends</button>
@@ -169,8 +169,8 @@ const Post: React.FC = () => {
                                 </div>
                             </div>
                             <div className="socialIcon flex">
-                                <img src="/public/assets/ri_facebook-fill.svg" alt="ri_facebook" />
-                                <img src="/public/assets/uil_instagram.svg" alt="uil_instagram" />
+                                <img src="/assets/ri_facebook-fill.svg" alt="ri_facebook" />
+                                <img src="/assets/uil_instagram.svg" alt="uil_instagram" />
                             </div>
                         </div>
                     </div>
@@ -178,7 +178,7 @@ const Post: React.FC = () => {
                         <div className="search">
                             <form action="" className="search flex">
                                 <input type="text" placeholder="search..." />
-                                <img src="/public/assets/search.svg" alt="" />
+                                <img src="/assets/search.svg" alt="" />
                             </form>
                         </div>
                         <h1>Categories</h1>
@@ -193,7 +193,7 @@ const Post: React.FC = () => {
                             {Array.isArray(popularBlogs) && popularBlogs.slice(0, 2).map((elem) => (
                                 <Link to={`/blogs/${elem.id}`} className="card" key={elem.id}>
                                     <img src={elem.imageSrc} alt="" />
-                                    <div className="date"><MdDateRange  style={{fontSize:"1.2  rem"}}/>{elem.Date}</div>
+                                    <div className="date"><MdDateRange style={{ fontSize: "1.2  rem" }} />{elem.Date}</div>
                                     <h3 className="postCardTitle">{elem.title}</h3>
                                 </Link>
                             ))}

@@ -19,25 +19,25 @@ const CaseSlider = () => {
 
   const caseSlides = [
     {
-      videoSrc: "/public/assets/SB.mp4",
+      videoSrc: "/assets/SB.mp4",
       title: "Satyam Bhuyaan",
       description: "Web development",
       websiteUrl: "https://satyambhuyan.com/",
     },
     {
-      videoSrc: "/public/assets/OWW.mp4",
+      videoSrc: "/assets/OWW.mp4",
       title: "OldWorldWeb",
       description: "Web development",
       websiteUrl: "https://www.oldworldweb.com/",
     },
     {
-      videoSrc: "/public/assets/Refine.mp4",
+      videoSrc: "/assets/Refine.mp4",
       title: "Refine Creations",
       description: "Web development",
       websiteUrl: "https://refinecreations.com/",
     },
     {
-      videoSrc: "/public/assets/stepanie.png",
+      videoSrc: "/assets/stepanie.png",
       title: "Stephanie Coudray",
       description: "Web development",
       websiteUrl: "https://stephaniecoudray.oldworldweb.com/",

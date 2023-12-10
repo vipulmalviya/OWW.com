@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "imageSrc": "/public/assets/blog/Top10 Latest Trends in Web Development (2).jpg",
+    "imageSrc": "/assets/blog/Top10 Latest Trends in Web Development (2).jpg",
     "category": "Devlopment",
     "Date": "apr 16, 2023",
     "title": " 10 Latest Trends in Web Development",
@@ -54,7 +54,7 @@
       }
     ],
     "author": "stifhan",
-    "authorPic": "/public/assets/Ellipse 14.png",
+    "authorPic": "/assets/Ellipse 14.png",
     "tags": [
       "Devlopment",
       "Designing"
@@ -62,7 +62,7 @@
   },
   {
     "id": 2,
-    "imageSrc": "/public/assets/blog/The Importance of Responsive Web Design.jpg",
+    "imageSrc": "/assets/blog/The Importance of Responsive Web Design.jpg",
     "category": "Designing",
     "Date": "apr 16, 2023",
     "title": "Responsive Design Importance: Enhancing User Experience",
@@ -99,7 +99,7 @@
       }
     ],
     "author": "stifhan",
-    "authorPic": "/public/assets/Ellipse 14.png",
+    "authorPic": "/assets/Ellipse 14.png",
     "tags": [
       "Devlopment",
       "Designing"
@@ -107,7 +107,7 @@
   },
   {
     "id": 3,
-    "imageSrc": "/public/assets/blog/Top10 Latest WordPress plugin  in Web Development.jpg",
+    "imageSrc": "/assets/blog/Top10 Latest WordPress plugin  in Web Development.jpg",
     "category": "Trends",
     "Date": "apr 16, 2023",
     "title": "The Top 10 WordPress Plugins Every Website Should Have",
@@ -164,7 +164,7 @@
       }
     ],
     "author": "stifhan",
-    "authorPic": "/public/assets/Ellipse 14.png",
+    "authorPic": "/assets/Ellipse 14.png",
     "tags": [
       "Devlopment",
       "Designing"
@@ -172,7 +172,7 @@
   },
   {
     "id": 4,
-    "imageSrc": "/public/assets/blog/WordPress vs. Other CMS_ Which One Is Right for Your Website.jpg  ",
+    "imageSrc": "/assets/blog/WordPress vs. Other CMS_ Which One Is Right for Your Website.jpg  ",
     "category": "Businesses",
     "Date": "apr 16, 2023",
     "title": "WordPress vs. Other CMS: Which One Is Right for Your Website?",
@@ -217,7 +217,7 @@
       }
     ],
     "author": "stifhan",
-    "authorPic": "/public/assets/Ellipse 14.png",
+    "authorPic": "/assets/Ellipse 14.png",
     "tags": [
       "Devlopment",
       "Designing"
@@ -225,7 +225,7 @@
   },
   {
     "id": 5,
-    "imageSrc": "/public/assets/blog/How to Optimize Your WordPress Website for Search Engines.jpg",
+    "imageSrc": "/assets/blog/How to Optimize Your WordPress Website for Search Engines.jpg",
     "category": "Security",
     "Date": "apr 16, 2023",
     "title": "How to Optimize Your WordPress Website for Search Engines",
@@ -260,7 +260,7 @@
       "By following these essential steps, you can effectively enhance your WordPress website's search engine visibility and drive organic traffic to your digital doorstep. Remember, SEO is an ongoing process that demands dedication and adaptability. Stay informed about the latest trends and algorithm updates to maintain a competitive edge in the dynamic online landscape."
     ],
     "author": "stifhan",
-    "authorPic": "/public/assets/Ellipse 14.png",
+    "authorPic": "/assets/Ellipse 14.png",
     "tags": [
       "Devlopment",
       "Designing"

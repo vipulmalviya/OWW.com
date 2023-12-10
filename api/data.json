@@ -1,7 +1,7 @@
 [
     {
         "id": 1,
-        "imageSrc": "/public/assets/sb.png",
+        "imageSrc": "/assets/sb.png",
         "clientName": "Satyam Bhuyan",
         "category": "UI_UX_Design",
         "startDate": "2023-01-01",
@@ -9,14 +9,14 @@
         "description": "design & Web development",
         "title": "Satyam Bhuyan",
         "images": [
-            "/public/assets/satyamfull.jpg",
-            "/public/assets/satyamfull2.jpg",
-            "/public/assets/satyamfull3.jpg"
+            "/assets/satyamfull.jpg",
+            "/assets/satyamfull2.jpg",
+            "/assets/satyamfull3.jpg"
         ]
     },
     {
         "id": 2,
-        "imageSrc": "/public/assets/oww.png",
+        "imageSrc": "/assets/oww.png",
         "description": "design & Web development",
         "clientName": "Old World Web",
         "category": "UI_UX_Design",
@@ -24,14 +24,14 @@
         "finishDate": "2023-03-01",
         "title": "Old World Web",
         "images": [
-            "/public/assets/owwfull.jpg",
-            "/public/assets/owwfull2.jpg",
-            "/public/assets/owwfull3.jpg"
+            "/assets/owwfull.jpg",
+            "/assets/owwfull2.jpg",
+            "/assets/owwfull3.jpg"
         ]
     },
     {
         "id": 3,
-        "imageSrc": "/public/assets/refine.png",
+        "imageSrc": "/assets/refine.png",
         "description": "design & Web development",
         "clientName": "refine creation",
         "category": "E-Commerce",
@@ -39,14 +39,14 @@
         "finishDate": "2023-04-01",
         "title": "refine creation",
         "images": [
-            "/public/assets/refinefull.jpg",
-            "/public/assets/refinefull.jpg",
-            "/public/assets/refinefull.jpg"
+            "/assets/refinefull.jpg",
+            "/assets/refinefull.jpg",
+            "/assets/refinefull.jpg"
         ]
     },
     {
         "id": 4,
-        "imageSrc": "/public/assets/astro.png",
+        "imageSrc": "/assets/astro.png",
         "clientName": "Astro Ashtangini",
         "category": "Security",
         "startDate": "2023-03-01",
@@ -54,14 +54,14 @@
         "description": "design & Web development",
         "title": "Astro Ashtangini",
         "images": [
-            "/public/assets/astrofull.png",
-            "/public/assets/astro2.jpg",
-            "/public/assets/astro3.jpg"
+            "/assets/astrofull.png",
+            "/assets/astro2.jpg",
+            "/assets/astro3.jpg"
         ]
     },
     {
         "id": 5,
-        "imageSrc": "/public/assets/stepanie.png",
+        "imageSrc": "/assets/stepanie.png",
         "clientName": "Stephanie Coudray",
         "category": "UI_UX_Design",
         "startDate": "2023-03-01",
@@ -69,9 +69,9 @@
         "description": "design & Web development",
         "title": "Stephanie Coudray",
         "images": [
-            "/public/assets/stephaniefull.jpg",
-            "/public/assets/stephaniefull3.jpg",
-            "/public/assets/stephaniefull2.jpg"
+            "/assets/stephaniefull.jpg",
+            "/assets/stephaniefull3.jpg",
+            "/assets/stephaniefull2.jpg"
         ]
     }
 ]

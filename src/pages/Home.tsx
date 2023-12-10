@@ -34,15 +34,15 @@ const Home: React.FC = () => {
 
       if (img1 && img2 && img3 && img4) {
         if (isDarkMode) {
-          img1.src = "/public/assets/Hero-img.png";
-          img2.src = "/public/assets/Hero-img.png";
-          img3.src = "/public/assets/aboutus=img.png";
-          img4.src = "/public/assets/Sent Message-cuate 1.svg";
+          img1.src = "/assets/Hero-img.png";
+          img2.src = "/assets/Hero-img.png";
+          img3.src = "/assets/aboutus=img.png";
+          img4.src = "/assets/Sent Message-cuate 1.svg";
         } else {
-          img1.src = "/public/assets/Group 2.svg";
-          img2.src = "/public/assets/Group 3.svg";
-          img3.src = "/public/assets/Application programming interface-pana.png";
-          img4.src = "/public/assets/sentm.svg";
+          img1.src = "/assets/Group 2.svg";
+          img2.src = "/assets/Group 3.svg";
+          img3.src = "/assets/Application programming interface-pana.png";
+          img4.src = "/assets/sentm.svg";
         }
       }
     };
@@ -96,7 +96,7 @@ const Home: React.FC = () => {
         <section className="section">
           <div className={isPlaying ? "demo on" : "demo"} onClick={toggleVideo}>
             <div className="vid">
-              <video className="vids" ref={videoRef} src="/public/assets/OWW Post.mp4"></video>
+              <video className="vids" ref={videoRef} src="/assets/OWW Post.mp4"></video>
             </div>
           </div>
           <div className="container hero">
@@ -130,8 +130,8 @@ const Home: React.FC = () => {
                 </div>
               </div>
               <div className="heroImg flex">
-                <img className="img2 img" src="/public/assets/Group 2.svg" alt="" />
-                <img className="img1 img" src="/public/assets/Group 3.svg" alt="" />
+                <img className="img2 img" src="/assets/Group 2.svg" alt="" />
+                <img className="img1 img" src="/assets/Group 3.svg" alt="" />
               </div>
             </div>
           </div>
@@ -143,7 +143,7 @@ const Home: React.FC = () => {
           <div className="container aboutContainer">
             <div className="flex aboutSection">
               <div className="aboutImg">
-                <img className="abimg" src="/public/assets/aboutus=img.png" alt="" />
+                <img className="abimg" src="/assets/aboutus=img.png" alt="" />
               </div>
               <div className="aboutText">
                 <h4 className="lable lable2 flex">
@@ -188,7 +188,7 @@ const Home: React.FC = () => {
                 <Contactform />
               </div>
               <div className="contactillu">
-                <img className="sentm" src="/public/assets/sentm.svg" alt="" />
+                <img className="sentm" src="/assets/sentm.svg" alt="" />
               </div>
             </div>
           </div>
@@ -339,7 +339,7 @@ const Home: React.FC = () => {
               <div className="contactImg">
                 <div className="newsletterText">
                   <div className="intro flex">
-                    <img src="public/assets/Ellipse 14.png" alt="" />
+                    <img src="/assets/Ellipse 14.png" alt="" />
                     <div className="names">
                       <span>Antonio Rodriguez</span> <br />
                       <p>CEO, Jio Digital Life</p>
@@ -349,7 +349,7 @@ const Home: React.FC = () => {
                     <p>We are grateful to know that you are <br />
                       interested in our content and services. Subscribe.!</p>
                   </div>
-                  <img src="public/assets/signature (3) 1.png" alt="signeture" className="signatureImg" />
+                  <img src="/assets/signature (3) 1.png" alt="signeture" className="signatureImg" />
                 </div>
               </div>
             </div>
