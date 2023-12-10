@@ -118,7 +118,7 @@ const Header = () => {
             <div className="logo">
               <Link to="/">
                 <img
-                  src="/src/assets/Profile png logo 1.svg"
+                  src="src/assets/Profile png logo 1.svg"
                   alt="logo of the old world web"
                 />
               </Link>
