@@ -349,7 +349,7 @@ const Home: React.FC = () => {
                     <p>We are grateful to know that you are <br />
                       interested in our content and services. Subscribe.!</p>
                   </div>
-                  <img src="public/assets/signature (3) 1.png" alt="" className="signatureImg" />
+                  <img src="public/assets/signature (3) 1.png" alt="signeture" className="signatureImg" />
                 </div>
               </div>
             </div>

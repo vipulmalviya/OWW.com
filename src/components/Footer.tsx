@@ -28,7 +28,7 @@ const Footer = () => {
       <footer className="section">
         <div className="footercontainer flex footerflex">
           <div className="footerItems centerl-f">
-            <img src="public/assets/Profile png logo 1.svg" alt="" />
+            <img src="public/assets/Profile_png_logo_1.svg" alt="" />
             <p>Copyright &copy; old world web 2023</p>
           </div>
           <div className="footerItems flexdiraction">
