@@ -118,7 +118,7 @@ const Header = () => {
             <div className="logo">
               <Link to="/">
                 <img
-                  src="/src/assets/Profile png logo 1.svg"
+                  src="public/assets/Profile png logo 1.svg"
                   alt="logo of the old world web"
                 />
               </Link>
@@ -166,7 +166,7 @@ const Header = () => {
                       transform: isDay ? "translateY(-150%)" : "translateY(55%)",
                     }}
                     alt="Day"
-                    src="/src/assets/Frame 24.svg"
+                    src="public/assets/Frame 24.svg"
                   />
                   <img
                     id="night"
@@ -174,7 +174,7 @@ const Header = () => {
                       transform: isDay ? "translateY(-55%)" : "translateY(150%)",
                     }}
                     alt="Night"
-                    src="/src/assets/Frame 23.svg"
+                    src="public/assets/Frame 23.svg"
                   />
                 </div>
               </div>
@@ -196,13 +196,13 @@ const Header = () => {
               </div>
               <div className="gridItem gridFlex">
                 <Link to="/" className="serviceLinks">
-                  <img src="/src/assets/Group (2).svg" alt="" />
+                  <img src="public/assets/Group (2).svg" alt="" />
                   <h3>UI & UX Designing</h3>
                 </Link>
               </div>
               <div className="gridItem gridFlex">
                 <Link to="/" className="serviceLinks">
-                  <img src="/src/assets/Wrench_1_.svg" alt="" />
+                  <img src="public/assets/Wrench_1_.svg" alt="" />
                   <h3>web maintenance</h3>
                 </Link>
               </div>
@@ -218,14 +218,14 @@ const Header = () => {
               </div>
               <div className="gridItem gridFlex">
                 <Link to="/" className="serviceLinks">
-                  <img src="/src/assets/code-svgrepo-com 1.svg" alt="" />
+                  <img src="public/assets/code-svgrepo-com 1.svg" alt="" />
                   <h3>web development</h3>
                 </Link>
               </div>
               <div className="gridItem gridFlex">
                 <Link to="/" className="serviceLinks">
                   <img
-                    src="/src/assets/fingerprint-svgrepo-com 1 (1).svg"
+                    src="public/assets/fingerprint-svgrepo-com 1 (1).svg"
                     alt=""
                   />
                   <h3>web security</h3>

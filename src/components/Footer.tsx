@@ -28,7 +28,7 @@ const Footer = () => {
       <footer className="section">
         <div className="footercontainer flex footerflex">
           <div className="footerItems centerl-f">
-            <img src="/src/assets/Profile png logo 1.svg" alt="" />
+            <img src="public/assets/Profile png logo 1.svg" alt="" />
             <p>Copyright &copy; old world web 2023</p>
           </div>
           <div className="footerItems flexdiraction">
@@ -60,7 +60,7 @@ const Footer = () => {
           </div>
           <div className="footerbtn">
             <a href="#header">
-              <img src="/src/assets/Component 19.svg" alt="" />
+              <img src="public/assets/Component 19.svg" alt="" />
             </a>
             <div className="flex" onClick={toggleTheme}>
               <div
@@ -75,7 +75,7 @@ const Footer = () => {
                     transform: isDay ? "translateY(-100%)" : "translateY(50%)",
                   }}
                   alt="Day"
-                  src="/src/assets/Frame 24.svg"
+                  src="public/assets/Frame 24.svg"
                 />
                 <img
                   id="night"
@@ -83,7 +83,7 @@ const Footer = () => {
                     transform: isDay ? "translateY(-50%)" : "translateY(100%)",
                   }}
                   alt="Night"
-                  src="/src/assets/Frame 23.svg"
+                  src="public/assets/Frame 23.svg"
                 />
               </div>
             </div>

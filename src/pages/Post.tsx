@@ -50,27 +50,27 @@ const Post: React.FC = () => {
     const cat = [
         {
             "id": 1,
-            "imgSrc": "/src/assets/image-square.svg",
+            "imgSrc": "/public/assets/image-square.svg",
             "catName": "Devlopment",
         },
         {
             "id": 2,
-            "imgSrc": "/src/assets/image-square.svg",
+            "imgSrc": "/public/assets/image-square.svg",
             "catName": "Designing",
         },
         {
             "id": 3,
-            "imgSrc": "/src/assets/image-square.svg",
+            "imgSrc": "/public/assets/image-square.svg",
             "catName": "Trends",
         },
         {
             "id": 4,
-            "imgSrc": "/src/assets/image-square.svg",
+            "imgSrc": "/public/assets/image-square.svg",
             "catName": "Businesses",
         },
         {
             "id": 5,
-            "imgSrc": "/src/assets/image-square.svg",
+            "imgSrc": "/public/assets/image-square.svg",
             "catName": "Security",
         }
     ]
@@ -120,7 +120,7 @@ const Post: React.FC = () => {
                             </div>
                         ))}
                         <div className="quteCard ">
-                            <img src="/src/assets/qutetion.svg" className="qutaionImg" alt="" />
+                            <img src="/public/assets/qutetion.svg" className="qutaionImg" alt="" />
                             <h4 className="quteContent">
                                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero architecto amet consequatur consectetur velit autem molestiae reprehenderit, accusamus minus ad repellendus optio a, eius incidunt rerum dolorem debitis sit porro. Lorem ipsum dolor sit amet, consectetur adipisicing elit. At illo corporis tempora dignissimos unde earum cum odit! Illo eligendi delectus a sed doloremque, quod quae exercitationem quidem recusandae ullam earum?
                             </h4>
@@ -169,8 +169,8 @@ const Post: React.FC = () => {
                                 </div>
                             </div>
                             <div className="socialIcon flex">
-                                <img src="/src/assets/ri_facebook-fill.svg" alt="ri_facebook" />
-                                <img src="/src/assets/uil_instagram.svg" alt="uil_instagram" />
+                                <img src="/public/assets/ri_facebook-fill.svg" alt="ri_facebook" />
+                                <img src="/public/assets/uil_instagram.svg" alt="uil_instagram" />
                             </div>
                         </div>
                     </div>
@@ -178,7 +178,7 @@ const Post: React.FC = () => {
                         <div className="search">
                             <form action="" className="search flex">
                                 <input type="text" placeholder="search..." />
-                                <img src="/src/assets/search.svg" alt="" />
+                                <img src="/public/assets/search.svg" alt="" />
                             </form>
                         </div>
                         <h1>Categories</h1>

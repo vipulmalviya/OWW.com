@@ -22,22 +22,22 @@ const caseSlider = () => {
 
   const items = [
     {
-      image: "src/assets/big-paint-brush-svgrepo-com 1.svg",
+      image: "public/assets/big-paint-brush-svgrepo-com 1.svg",
       title: "ui & ux designing",
       description: "Crafting immersive interfaces that delight users. Elevate engagement with seamless design, intuitive navigation, and captivating visuals.",
     },
     {
-      image: "src/assets/code-svgrepo-comwhite 1.svg",
+      image: "public/assets/code-svgrepo-comwhite 1.svg",
       title: "web development",
       description: "Turning ideas into digital reality. Expert coding, responsive design, and scalable solutions that empower your online vision.",
     },
     {
-      image: "src/assets/maintenance-mechanic-repair-svgrepo-com 1.svg",
+      image: "public/assets/maintenance-mechanic-repair-svgrepo-com 1.svg",
       title: "web maintenance",
       description: "Sustain digital excellence effortlessly. Timely updates, bug fixes, and optimizations to keep your website running flawlessly.",
     },
     {
-      image: "src/assets/fingerprint-svgrepo-com 1.svg",
+      image: "public/assets/fingerprint-svgrepo-com 1.svg",
       title: "web security",
       description: "Shielding your digital fortress. Robust security protocols, encryption, and vigilant monitoring to safeguard your data and user trust.",
     },
