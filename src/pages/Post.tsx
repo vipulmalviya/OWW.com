@@ -1,8 +1,5 @@
 import { Fragment, useEffect, useState } from "react"
 import { Link, useLoaderData } from "react-router-dom"
-import { VscArrowCircleLeft } from "react-icons/vsc";
-import { VscArrowCircleRight } from "react-icons/vsc";
-// import { FcShare } from "react-icons/fc";
 import Contactemail from "../components/Contactemail";
 import { FacebookShareButton, TwitterShareButton, FacebookIcon, TwitterIcon, LinkedinShareButton, LinkedinIcon, WhatsappShareButton, WhatsappIcon } from "react-share";
 import { MdDateRange } from "react-icons/md";
@@ -75,7 +72,7 @@ const Post: React.FC = () => {
         }
     ]
 
-    const [isopen, setOpen] = useState(false)
+    // const [isopen, setOpen] = useState(false)
     const currentPageUrl = window.location.href;
 
     return (
@@ -174,7 +171,7 @@ const Post: React.FC = () => {
                             </div>
                         </div>
                     </div>
-                    <div className={(isopen) ? "isopen" : "blogRight"}>
+                    <div className="blogRight">
                         <div className="search">
                             <form action="" className="search flex">
                                 <input type="text" placeholder="search..." />
