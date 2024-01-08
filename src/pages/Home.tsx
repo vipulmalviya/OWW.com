@@ -22,11 +22,6 @@ interface Blog {
 
 
 const Home: React.FC = () => {
-
-
-
-
-
   useEffect(() => {
     const img1 = document.querySelector(".img1") as HTMLImageElement | null;
     const img2 = document.querySelector(".img2") as HTMLImageElement | null;
@@ -297,7 +292,7 @@ const Home: React.FC = () => {
               <div className="sectionTitle">Latest in Tech</div>
               <p className="blogPostp p">You may be interested in our technologies. We want to share more helpful information with you about our digital life and methods.</p>
               <div className="blog">
-                {Array.isArray(popularBlogs) && popularBlogs.slice(0, 2).map((elem) => (<div className="postContainer">
+                {Array.isArray(popularBlogs) && popularBlogs.slice(0, 2).map((elem) => (<div key={elem.id} className="postContainer">
                   <div className="postImg">
                     <img src={elem.imageSrc} alt="" />
                   </div>
@@ -314,7 +309,7 @@ const Home: React.FC = () => {
               </div>
             </div>
             <div className="recentPostImg">
-              {Array.isArray(popularBlogs) && popularBlogs.slice(2, 3).map((elem) => (<div className="recenttt">
+              {Array.isArray(popularBlogs) && popularBlogs.slice(2, 3).map((elem) => (<div key={elem.id} className="recenttt">
                 <div className="category category2">
                   <div className="categoryLabel">{elem.category}</div>
                   <div className="date"><MdDateRange />{elem.Date}</div>

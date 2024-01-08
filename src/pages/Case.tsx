@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import '../style.css'
-import { Fragment, useEffect, useState } from 'react';
+import { Fragment, useEffect, useMemo , useState } from 'react';
 import GetQuotebtn from '../components/GetQuotebtn';
 import CaseCard from '../components/CaseCard';
 import CaseCategory from '../components/CaseCategory';
@@ -49,7 +49,7 @@ const Case = () => {
     fetchBlogs();
   }, [currentPage, pageSize, selectedCategory]);
 
-
+  const memoizedCards = useMemo(() => cards, [cards]);
 
   const handleCategoryChange =(category: string | null) => {
     setSelectedCategory(category);
@@ -92,7 +92,7 @@ const Case = () => {
       <div className="section">
         <div className="container">
           <div className="protfolio">
-            <CaseCard cards={cards} currentPage={currentPage} selectedCategory={selectedCategory} pageSize={pageSize} />
+            <CaseCard cards={memoizedCards} currentPage={currentPage} selectedCategory={selectedCategory} pageSize={pageSize} />
           </div>
           <div className='flex' style={{ width: "100%", justifyContent: "center" }}>
             <div className="btn aBtn">

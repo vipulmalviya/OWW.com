@@ -202,7 +202,7 @@ const Post: React.FC = () => {
                         <div className="tags">
                             <h2>Tags</h2>
                             <div className="catagoryBtn">
-                                {tags.map((elem) => (<button>{elem}</button>))}
+                                {tags.map((elem) => (<button key={elem}>{elem}</button>))}
                             </div>
                         </div>
                     </div>

@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 import GetQuoteBtn from "../components/GetQuotebtn"
-import { Fragment, useEffect, useState } from "react"
+import { Fragment, useEffect, useMemo, useState } from "react"
 import BlogCard from "../components/blogCard"
 import CategorSelection from "../components/CategorSelection"
 
@@ -47,13 +47,15 @@ const Blog = () => {
         }
       } catch (error) {
         console.error('Error fetching blogs:', error);
-      }
+      } 
     }
+    console.log("firest time component loded");
+    
 
     fetchBlogs();
   }, [currentPage, pageSize, selectedCategory]);
 
-
+  const memoizedBlogs = useMemo(() => blogs, [blogs]);
 
   const handleCategoryChange = (category: string | null) => {
     setSelectedCategory(category);
@@ -92,7 +94,7 @@ const Blog = () => {
           <div className="blogBtn">
             <CategorSelection onSelectCategory={handleCategoryChange}  activeCategory={activeCategory} />
           </div>
-          <BlogCard blogs={blogs} currentPage={currentPage} selectedCategory={selectedCategory} pageSize={pageSize} />
+          <BlogCard blogs={memoizedBlogs} currentPage={currentPage} selectedCategory={selectedCategory} pageSize={pageSize} />
           <GetQuoteBtn text={"Load More"} />
         </div>
       </div>
